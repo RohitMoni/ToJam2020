@@ -3,45 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Guest : MonoBehaviour, IPointerClickHandler
+namespace Seating
 {
-    public bool inDrag = false, overSeat = false;
-    public CanvasGroup canvasGroup;
-    public int relative, seatIndex = -1;
-
-    void Awake()
+    public class Guest : MonoBehaviour, IPointerClickHandler
     {
-        canvasGroup = GetComponent<CanvasGroup>();
-    }
+        public bool inDrag = false, overSeat = false;
+        public CanvasGroup canvasGroup;
+        public int relative, seatIndex = -1;
 
-    public void StartDrag(int relativeIndex)
-    {
-        inDrag = true;
-        canvasGroup.blocksRaycasts = false;
-        relative = relativeIndex;
-    }
-
-    public void SeatGuest(Transform seatTransform)
-    {
-        inDrag = false;
-        canvasGroup.blocksRaycasts = true;
-        overSeat = false;
-
-        transform.position = seatTransform.position;
-        transform.SetParent(seatTransform);
-        seatIndex = seatTransform.GetSiblingIndex();
-    }
-
-    public void OnPointerClick(PointerEventData e)
-    {
-        SeatingManager.instance.PickUpGuest(this);
-    }
-
-    public void Update()
-    {
-        if(inDrag && !overSeat)
+        void Awake()
         {
-            transform.position = Input.mousePosition;
+            canvasGroup = GetComponent<CanvasGroup>();
+        }
+
+        public void StartDrag(int relativeIndex)
+        {
+            inDrag = true;
+            canvasGroup.blocksRaycasts = false;
+            relative = relativeIndex;
+        }
+
+        public void SeatGuest(Transform seatTransform)
+        {
+            inDrag = false;
+            canvasGroup.blocksRaycasts = true;
+            overSeat = false;
+
+            transform.position = seatTransform.position;
+            transform.SetParent(seatTransform);
+            seatIndex = seatTransform.GetSiblingIndex();
+        }
+
+        public void OnPointerClick(PointerEventData e)
+        {
+            SeatingManager.instance.PickUpGuest(this);
+        }
+
+        public void Update()
+        {
+            if (inDrag && !overSeat)
+            {
+                transform.position = Input.mousePosition;
+            }
         }
     }
 }
