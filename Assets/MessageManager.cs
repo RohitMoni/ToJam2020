@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MessageManager : MonoBehaviour
 {
-    public GameObject messagePrefab;
+    public GameObject messageRightPrefab, messageLeftPrefab;
     public Transform left, right;
     private bool leftRight = true;
     string[] messages = {   "Hey there! Heard you were the organizer for the reunion! Glad we got somebody capable this time around. Just a heads up, I'm still allergic to [allergy]!",
@@ -17,10 +17,10 @@ public class MessageManager : MonoBehaviour
     {
         string messageString = messages[Random.Range(0, messages.Length)];
 
-        GameObject leftMessage = Instantiate(messagePrefab, left);
+        GameObject leftMessage = Instantiate(messageLeftPrefab, left);
         var leftTextMesh = leftMessage.GetComponentInChildren<UnityEngine.UI.Text>();
 
-        GameObject rightMessage = Instantiate(messagePrefab, right);
+        GameObject rightMessage = Instantiate(messageRightPrefab, right);
         var rightTextMesh = rightMessage.GetComponentInChildren<UnityEngine.UI.Text>();
 
         leftTextMesh.text = messageString;
