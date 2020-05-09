@@ -11,7 +11,7 @@ namespace _2020Vision
         public bool IsMet(RequirementContext context)
         {
             var duplicateFood = new List<Food>();
-            duplicateFood.AddRange(context.foodArrangement.food);
+            duplicateFood.AddRange(context.partyState.foodArrangement.food);
 
             for (int i = 0; i < requiredFood.food.Count; ++i)
             {
