@@ -10,9 +10,9 @@ namespace _2020Vision
 
         // Get our score in terms of number of stars.
         // Generally rounds down
-        public int GetScoreStars(PartyState state, List<IRequirement> requirements)
+        public int CalcScoreStars(PartyState state, List<IRequirement> requirements)
         {
-            var scorePercentage = GetScorePercentage(state, requirements);
+            var scorePercentage = CalcScorePercentage(state, requirements);
 
             // Take the score as a percentage (ex: 0.8)
             // Add epsilon to account for floating point error (Ex: 0.999 should be 1.x). Important because we floor the value later
@@ -23,7 +23,7 @@ namespace _2020Vision
 
         // Returns a number between 0 and 1, representing the percentage score accomplished by the state passed in
         // Total point value is determined by the combined value of all requirements
-        public float GetScorePercentage(PartyState state, List<IRequirement> requirements)
+        public float CalcScorePercentage(PartyState state, List<IRequirement> requirements)
         {
             var reqContext = new RequirementContext()
             {
