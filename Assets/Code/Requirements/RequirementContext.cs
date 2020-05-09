@@ -5,5 +5,6 @@ namespace _2020Vision {
     {
         public SeatingArrangement seatingArrangement;
         public FoodArrangement foodArrangement;
+        public ContributionArrangement contributionArrangement;
     }
 }

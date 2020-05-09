@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
 namespace _2020Vision {
 
     // This requirement checks that a specific food required is in the arrangement
