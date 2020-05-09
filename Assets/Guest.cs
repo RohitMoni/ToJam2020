@@ -5,35 +5,41 @@ using UnityEngine.EventSystems;
 
 public class Guest : MonoBehaviour, IPointerClickHandler
 {
-    public bool inDrag = false;
-    public bool overSeat = false;
+    public bool inDrag = false, overSeat = false;
     public CanvasGroup canvasGroup;
-    public int seatIndex = -1;
-    public int relative;
+    public int relative, seatIndex = -1;
 
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        //inventory = SeatingManager.instance.inventory;
     }
 
-    public void Setup(int relativeIndex)
+    public void StartDrag(int relativeIndex)
     {
         inDrag = true;
         canvasGroup.blocksRaycasts = false;
         relative = relativeIndex;
     }
 
+    public void SeatGuest(Transform seatTransform)
+    {
+        inDrag = false;
+        canvasGroup.blocksRaycasts = true;
+        overSeat = false;
+
+        transform.position = seatTransform.position;
+        transform.SetParent(seatTransform);
+        seatIndex = seatTransform.GetSiblingIndex();
+    }
+
     public void OnPointerClick(PointerEventData e)
     {
-        SeatingManager.instance.PickUpGuest(this, transform.parent.GetSiblingIndex());
+        SeatingManager.instance.PickUpGuest(this);
     }
 
     public void Update()
     {
-        if (overSeat)
-            return;
-        if(inDrag)
+        if(inDrag && !overSeat)
         {
             transform.position = Input.mousePosition;
         }

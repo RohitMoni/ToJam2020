@@ -7,8 +7,6 @@ using UnityEngine;
 public class Seat : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public SeatingManager manager;
-    public bool mouseOver = false;
-
 
     private void Start()
     {
@@ -17,17 +15,20 @@ public class Seat : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerEnter(PointerEventData e)
     {
+        //Fixes the Guest into this Seat and tells it to stop updating mousePosition
         if (manager.IsDragging)
         {
-            manager.PreviewGuest(this);
+            manager.dragGuest.overSeat = true;
+            manager.dragGuest.transform.position = transform.position;
         }
     }
 
     public void OnPointerExit(PointerEventData e)
     {
+        //Removes Guest in Seat preview
         if (manager.IsDragging)
         {
-            manager.EndPreview();
+            manager.dragGuest.overSeat = false;
         }
     }
 

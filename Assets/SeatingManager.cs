@@ -6,11 +6,11 @@ public class SeatingManager : MonoBehaviour
 {
     public Guest[] Guests;
     public static SeatingManager instance;
-    public Guest dragItem;
+    public Guest dragGuest;
     public GameObject inventory;
     public GameObject guestPrefab;
     public Seat overSlot;
-    public bool IsDragging { get => dragItem; }
+    public bool IsDragging { get => dragGuest; }
 
     private void Awake()
     {
@@ -25,30 +25,24 @@ public class SeatingManager : MonoBehaviour
 
     public void PlaceGuest(Seat seat)
     {
-        dragItem.transform.SetParent(seat.transform);
-        dragItem.inDrag = false;
-        dragItem.overSeat = false;
-        dragItem.canvasGroup.blocksRaycasts = true;
-        dragItem.transform.position = seat.transform.position;
-        dragItem.seatIndex = seat.transform.GetSiblingIndex();
+        dragGuest.SeatGuest(seat.transform);
 
         if (seat.transform.childCount == 1)
         {
-            dragItem = null;
+            dragGuest = null;
         }
         else
         {
             Guest oldGuest = seat.transform.GetChild(0).GetComponent<Guest>();
-            PickUpGuest(oldGuest, seat.transform.GetSiblingIndex());
+            PickUpGuest(oldGuest);
         }
     }
 
-    public void PickUpGuest(Guest item, int seatIndex)
+    public void PickUpGuest(Guest item)
     {
-        dragItem = item;
-        dragItem.seatIndex = seatIndex;
-        dragItem.transform.SetParent(transform);
-        dragItem.Setup(item.relative);
+        dragGuest = item;
+        dragGuest.transform.SetParent(transform);
+        dragGuest.StartDrag(item.relative);
     }
 
     public void Update()
@@ -61,41 +55,41 @@ public class SeatingManager : MonoBehaviour
 
     public void ReleaseGuest()
     {
-        if (dragItem.seatIndex > -1)
+        //If the Guest was in a seat return them
+        if (dragGuest.seatIndex > -1)
         {
-            Seat seat = transform.GetChild(dragItem.seatIndex).GetComponent<Seat>();
+            Seat seat = transform.GetChild(dragGuest.seatIndex).GetComponent<Seat>();
+
+            //Make sure there isn't already a Guest in the seat, don't hink this is possible so may remove
             if (seat.transform.childCount == 0)
+            {
                 PlaceGuest(seat);
+            }
             return;
         }
+        //Else the Guest came fromo the GuestList
 
-        List<GuestListItem> guestList = new List<GuestListItem>(inventory.GetComponentsInChildren<GuestListItem>());
-        guestList.Find(g => g.relative == dragItem.relative).Show();
+        //Get the ListItems into a list and find uncollapse the item
+        List<GuestListItem> guestList = new List<GuestListItem>();
+        guestList.AddRange(inventory.GetComponentsInChildren<GuestListItem>());
+        
 
-        Destroy(dragItem.gameObject);
+        guestList.Find(g => g.relative == dragGuest.relative).Show();
+
+        Destroy(dragGuest.gameObject);
     }
 
     public void PickUpGuest(GuestListItem item)
     {
+        //Release the held Guest
         if (IsDragging)
         {
             ReleaseGuest();
         }
 
-        //Spawn Guest from item
-        dragItem = Instantiate(guestPrefab, transform).GetComponent<Guest>();
-        dragItem.Setup(item.relative);
-        dragItem.transform.position = Input.mousePosition;
-    }
-
-    public void PreviewGuest(Seat seat)
-    {
-        dragItem.overSeat = true;
-        dragItem.transform.position = seat.transform.position;
-    }
-
-    public void EndPreview()
-    {
-        dragItem.overSeat = false;
+        //Spawn Guest from ListItem to mousePosition
+        dragGuest = Instantiate(guestPrefab, transform).GetComponent<Guest>();
+        dragGuest.StartDrag(item.relative);
+        dragGuest.transform.position = Input.mousePosition;
     }
 }
