@@ -1,42 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine;
 
 namespace Seating
 {
-    public class Guest : MonoBehaviour, IPointerClickHandler
+    public class Guest : MonoBehaviour
     {
         public bool inDrag = false, overSeat = false;
-        public CanvasGroup canvasGroup;
+        public Image portrait;
         public int relative, seatIndex = -1;
 
         void Awake()
         {
-            canvasGroup = GetComponent<CanvasGroup>();
+            portrait = transform.GetChild(0).GetComponent<Image>();
         }
 
-        public void StartDrag(int relativeIndex)
+        public void SetPortrait(int relativeIndex)
+        {
+            relative = relativeIndex;
+            portrait.sprite = FindObjectOfType<SeatingManager>().guestHeads[relative];
+        }
+
+        public void StartDrag()
         {
             inDrag = true;
-            canvasGroup.blocksRaycasts = false;
-            relative = relativeIndex;
         }
 
         public void SeatGuest(Transform seatTransform)
         {
             inDrag = false;
-            canvasGroup.blocksRaycasts = true;
             overSeat = false;
 
             transform.position = seatTransform.position;
             transform.SetParent(seatTransform);
             seatIndex = seatTransform.GetSiblingIndex();
-        }
-
-        public void OnPointerClick(PointerEventData e)
-        {
-            SeatingManager.instance.PickUpGuest(this);
         }
 
         public void Update()

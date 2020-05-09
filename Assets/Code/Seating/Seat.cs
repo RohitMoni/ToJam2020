@@ -40,6 +40,10 @@ namespace Seating
             {
                 manager.PlaceGuest(this);
             }
+            else if(transform.childCount > 0)
+            {
+                manager.PickUpGuest(GetComponentInChildren<Guest>());
+            }
         }
 
     }

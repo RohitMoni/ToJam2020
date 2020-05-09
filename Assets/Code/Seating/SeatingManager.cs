@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 namespace Seating
@@ -12,6 +13,9 @@ namespace Seating
         public GameObject inventory;
         public GameObject guestPrefab;
         public Seat overSlot;
+
+        public Sprite[] guestHeads;
+
         public bool IsDragging { get => dragGuest; }
 
         private void Awake()
@@ -44,7 +48,7 @@ namespace Seating
         {
             dragGuest = item;
             dragGuest.transform.SetParent(transform);
-            dragGuest.StartDrag(item.relative);
+            dragGuest.StartDrag();
         }
 
         public void Update()
@@ -62,23 +66,23 @@ namespace Seating
             {
                 Seat seat = transform.GetChild(dragGuest.seatIndex).GetComponent<Seat>();
 
-                //Make sure there isn't already a Guest in the seat, don't hink this is possible so may remove
                 if (seat.transform.childCount == 0)
                 {
                     PlaceGuest(seat);
+                    return;
                 }
-                return;
             }
-            //Else the Guest came fromo the GuestList
+             //Else the Guest came from the GuestList
+            {
+                //Get the ListItems into a list and find uncollapse the item
+                List<GuestListItem> guestList = new List<GuestListItem>();
+                guestList.AddRange(inventory.GetComponentsInChildren<GuestListItem>());
 
-            //Get the ListItems into a list and find uncollapse the item
-            List<GuestListItem> guestList = new List<GuestListItem>();
-            guestList.AddRange(inventory.GetComponentsInChildren<GuestListItem>());
 
+                guestList.Find(g => g.relative == dragGuest.relative).Show();
 
-            guestList.Find(g => g.relative == dragGuest.relative).Show();
-
-            Destroy(dragGuest.gameObject);
+                Destroy(dragGuest.gameObject);
+            }
         }
 
         public void PickUpGuest(GuestListItem item)
@@ -91,7 +95,8 @@ namespace Seating
 
             //Spawn Guest from ListItem to mousePosition
             dragGuest = Instantiate(guestPrefab, transform).GetComponent<Guest>();
-            dragGuest.StartDrag(item.relative);
+            dragGuest.StartDrag();
+            dragGuest.SetPortrait(item.relative);
             dragGuest.transform.position = Input.mousePosition;
         }
     }

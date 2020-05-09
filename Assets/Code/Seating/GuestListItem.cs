@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine;
 
 namespace Seating
 {
@@ -9,11 +10,14 @@ namespace Seating
     public class GuestListItem : MonoBehaviour, IPointerClickHandler
     {
         public int relative;
+        private Image portrait;
 
         //Temp
         private void Start()
         {
             relative = transform.GetSiblingIndex();
+            portrait = transform.GetChild(0).GetComponent<Image>();
+            portrait.sprite = FindObjectOfType<SeatingManager>().guestHeads[relative];
         }
 
         //The ListItem is hidden and shown based on changes to preferred height so that it is still in the same position in the list
@@ -22,13 +26,20 @@ namespace Seating
             if (e.button == PointerEventData.InputButton.Left)
             {
                 SeatingManager.instance.PickUpGuest(this);
-                GetComponent<UnityEngine.UI.LayoutElement>().preferredHeight = 0;
+                Hide();
             }
         }
 
         public void Show()
         {
-            GetComponent<UnityEngine.UI.LayoutElement>().preferredHeight = 100;
+            GetComponent<LayoutElement>().preferredHeight = 100;
+            portrait.enabled = true;
+        }
+
+        public void Hide()
+        {
+            GetComponent<LayoutElement>().preferredHeight = 0;
+            portrait.enabled = false;
         }
     }
 }
