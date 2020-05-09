@@ -4,11 +4,15 @@ using System.Collections.Generic;
 
 namespace _2020Vision {
 
+    // All data relevant to a seat
     public class SeatData
     {
-        public string assignedTo;
+        public string assignedTo; // Name of the person assigned to sit here
     }
 
+    // Seat data as a node, for use as a graph of seat nodes, representing a table and
+    // connecting seats.
+    // Need to use a graph vs a circular list because we have design requirements like having the seat 'across' the table be considered 'next to' the current seat.
     public class SeatNode
     {
         public SeatData data;
@@ -20,6 +24,7 @@ namespace _2020Vision {
         }
     }
 
+    // A dinner table: Class mostly used for helper functions
     public class DinnerTable
     {
         public SeatNode head;
@@ -71,6 +76,7 @@ namespace _2020Vision {
         }
     }
 
+    // A seating arrangement. Represents the sum total of seating data
     public class SeatingArrangement
     {
         public List<DinnerTable> tables;
