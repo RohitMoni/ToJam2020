@@ -1,11 +1,10 @@
-
-namespace _2020Vision {
-
+namespace _2020Vision
+{
     // This requirement is for requiring that a person sits away from another person (not next to)
     public class SeatedAwayFromRequirement : IRequirement {
         public int Value { get; }
-        public string PersonA { get; }
-        public string PersonB { get; }
+        public Person PersonA { get; }
+        public Person PersonB { get; }
 
         public bool IsMet(RequirementContext context)
         {

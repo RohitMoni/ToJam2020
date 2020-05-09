@@ -1,13 +1,11 @@
-
-using System;
 using System.Collections.Generic;
 
-namespace _2020Vision {
-
+namespace _2020Vision
+{
     // All data relevant to a seat
-    public class SeatData
+    public class Seat
     {
-        public string assignedTo; // Name of the person assigned to sit here
+        public Person person; // Person this seat is assigned to
     }
 
     // Seat data as a node, for use as a graph of seat nodes, representing a table and
@@ -15,12 +13,12 @@ namespace _2020Vision {
     // Need to use a graph vs a circular list because we have design requirements like having the seat 'across' the table be considered 'next to' the current seat.
     public class SeatNode
     {
-        public SeatData data;
+        public Seat seat;
         public List<SeatNode> connectedSeats;
 
-        public bool IsSeated(string name)
+        public bool IsSeated(Person person)
         {
-            return String.Equals(data.assignedTo, name, StringComparison.OrdinalIgnoreCase);
+            return seat.person == person;
         }
     }
 
@@ -29,7 +27,7 @@ namespace _2020Vision {
     {
         public SeatNode head;
 
-        public SeatNode GetSeatFor(string name)
+        public SeatNode GetSeatFor(Person person)
         {
             SeatNode rv = null;
 
@@ -42,7 +40,7 @@ namespace _2020Vision {
             {
                 var currentNode = nodesToVisit[0];
                 visitedNodes.Add(currentNode);
-                if (currentNode.IsSeated(name))
+                if (currentNode.IsSeated(person))
                 {
                     rv = currentNode;
                     break;

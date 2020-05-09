@@ -1,12 +1,11 @@
-
-namespace _2020Vision {
-
+namespace _2020Vision
+{
     // This requirement is for requiring that a person sits next to another person
     public class SeatedNextToRequirement : IRequirement
     {
         public int Value { get; }
-        public string PersonA { get; }
-        public string PersonB { get; }
+        public Person PersonA { get; }
+        public Person PersonB { get; }
 
         public bool IsMet(RequirementContext context)
         {
