@@ -3,15 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public enum ItemType
-{
-    GHOST = -2,
-    WILDCARD = -1,
-    WEAPON = 0,
-    MOVEMENT,
-    UTILITY
-}
-
 public class Guest : MonoBehaviour, IPointerClickHandler
 {
     public bool inDrag = false;

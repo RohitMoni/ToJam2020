@@ -7,7 +7,6 @@ using UnityEngine;
 public class Seat : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public SeatingManager manager;
-    public ItemType type;
     public bool mouseOver = false;
 
 
