@@ -1,9 +1,8 @@
 
 namespace _2020Vision {
 
-    // This requirement is for requiring that a person sits next to another person
-    public class SeatedNextToRequirement : IRequirement
-    {
+    // This requirement is for requiring that a person sits away from another person (not next to)
+    public class SeatedAwayFromRequirement : IRequirement {
         public int Value { get; }
         public string PersonA { get; }
         public string PersonB { get; }
@@ -24,12 +23,12 @@ namespace _2020Vision {
                         if (seat.connectedSeats[j].IsSeated(PersonB))
                         {
                             // We found PersonB next to PersonA
-                            return true;
+                            return false;
                         }
                     }
 
-                    // If we found PersonA, but PersonB wasn't next to them, this requirement isn't met
-                    return false;
+                    // If we found PersonA, but PersonB wasn't next to them, this requirement is met
+                    return true;
                 }
             }
 
