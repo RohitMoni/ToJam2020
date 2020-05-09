@@ -1,5 +1,5 @@
-namespace _2020Vision {
-
+namespace _2020Vision
+{
     // This requirement checks that a specific food required is in the arrangement
     public class PersonFoodRequirement : IRequirement
     {

@@ -1,12 +1,7 @@
 using System.Collections.Generic;
 
-namespace _2020Vision {
-
-    public class Person
-    {
-        public string name;
-    }
-
+namespace _2020Vision
+{
     public class Contribution
     {
         public Person person;

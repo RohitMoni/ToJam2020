@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using System.Linq;
 
-namespace _2020Vision {
-
+namespace _2020Vision
+{
     // This requirement checks that the required food is contained within a set of food passed in by context
     public class TotalFoodRequirement : IRequirement
     {

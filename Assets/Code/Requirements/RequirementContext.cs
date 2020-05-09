@@ -1,5 +1,5 @@
-
-namespace _2020Vision {
+namespace _2020Vision
+{
 
     public struct RequirementContext
     {

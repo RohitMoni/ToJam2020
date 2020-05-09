@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
-namespace _2020Vision {
-
+namespace _2020Vision
+{
     // Mutually exclusive
     public enum FoodCourse
     {
