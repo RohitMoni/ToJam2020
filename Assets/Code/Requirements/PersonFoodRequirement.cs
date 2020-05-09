@@ -8,9 +8,9 @@ namespace _2020Vision
 
         public bool IsMet(RequirementContext context)
         {
-            for (int i = 0; i < context.foodArrangement.food.Count; ++i)
+            for (int i = 0; i < context.partyState.foodArrangement.food.Count; ++i)
             {
-                if (requiredFood == context.foodArrangement.food[i])
+                if (requiredFood == context.partyState.foodArrangement.food[i])
                 {
                     return true;
                 }

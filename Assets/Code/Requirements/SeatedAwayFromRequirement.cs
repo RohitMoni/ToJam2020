@@ -9,7 +9,7 @@ namespace _2020Vision
         public bool IsMet(RequirementContext context)
         {
             // Find Person A in the seating arrangement
-            var seating = context.seatingArrangement;
+            var seating = context.partyState.seatingArrangement;
             for (int i = 0; i < seating.tables.Count; ++i)
             {
                 var table = seating.tables[i];

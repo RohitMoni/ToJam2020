@@ -1,47 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine;
 
-public class Guest : MonoBehaviour, IPointerClickHandler
+namespace Seating
 {
-    public bool inDrag = false, overSeat = false;
-    public CanvasGroup canvasGroup;
-    public int relative, seatIndex = -1;
-
-    void Awake()
+    public class Guest : MonoBehaviour
     {
-        canvasGroup = GetComponent<CanvasGroup>();
-    }
+        public bool inDrag = false, overSeat = false;
+        public Image portrait;
+        public int relative, seatIndex = -1;
 
-    public void StartDrag(int relativeIndex)
-    {
-        inDrag = true;
-        canvasGroup.blocksRaycasts = false;
-        relative = relativeIndex;
-    }
-
-    public void SeatGuest(Transform seatTransform)
-    {
-        inDrag = false;
-        canvasGroup.blocksRaycasts = true;
-        overSeat = false;
-
-        transform.position = seatTransform.position;
-        transform.SetParent(seatTransform);
-        seatIndex = seatTransform.GetSiblingIndex();
-    }
-
-    public void OnPointerClick(PointerEventData e)
-    {
-        SeatingManager.instance.PickUpGuest(this);
-    }
-
-    public void Update()
-    {
-        if(inDrag && !overSeat)
+        void Awake()
         {
-            transform.position = Input.mousePosition;
+            portrait = transform.GetChild(0).GetComponent<Image>();
+        }
+
+        public void SetPortrait(int relativeIndex)
+        {
+            relative = relativeIndex;
+            portrait.sprite = FindObjectOfType<SeatingManager>().guestHeads[relative];
+        }
+
+        public void StartDrag()
+        {
+            inDrag = true;
+        }
+
+        public void SeatGuest(Transform seatTransform)
+        {
+            inDrag = false;
+            overSeat = false;
+
+            transform.position = seatTransform.position;
+            transform.SetParent(seatTransform);
+            seatIndex = seatTransform.GetSiblingIndex();
+        }
+
+        public void Update()
+        {
+            if (inDrag && !overSeat)
+            {
+                transform.position = Input.mousePosition;
+            }
         }
     }
 }

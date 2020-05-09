@@ -8,9 +8,9 @@ namespace _2020Vision
 
         public bool IsMet(RequirementContext context)
         {
-            for (int i = 0; i < context.contributionArrangement.contributions.Count; ++i)
+            for (int i = 0; i < context.partyState.contributionArrangement.contributions.Count; ++i)
             {
-                if (requiredContribution == context.contributionArrangement.contributions[i])
+                if (requiredContribution == context.partyState.contributionArrangement.contributions[i])
                 {
                     return true;
                 }
