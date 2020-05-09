@@ -9,10 +9,10 @@ public class MainMenuButtonController : MonoBehaviour
 
     public void OnPlay()
     {
-        StartCoroutine(LoadPartyPlannerScene());
+        StartCoroutine(LoadIntroScene());
     }
 
-    IEnumerator LoadPartyPlannerScene()
+    IEnumerator LoadIntroScene()
     {
         // Play animation
         transition.SetTrigger("Start");
