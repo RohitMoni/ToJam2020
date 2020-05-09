@@ -36,13 +36,23 @@ namespace Seating
 
         public void OnPointerClick(PointerEventData e)
         {
-            if (manager.IsDragging)
+            if (e.button == PointerEventData.InputButton.Left)
             {
-                manager.PlaceGuest(this);
+                if (manager.IsDragging)
+                {
+                    manager.PlaceGuest(this);
+                }
+                else if (transform.childCount > 0)
+                {
+                    manager.PickUpGuest(GetComponentInChildren<Guest>());
+                }
             }
-            else if(transform.childCount > 0)
+            else if(e.button == PointerEventData.InputButton.Right)
             {
-                manager.PickUpGuest(GetComponentInChildren<Guest>());
+                if (transform.childCount > 0)
+                {
+                    manager.ReturnGuestToList(GetComponentInChildren<Guest>());
+                }
             }
         }
 

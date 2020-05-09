@@ -7,12 +7,10 @@ namespace Seating
 {
     public class SeatingManager : MonoBehaviour
     {
-        public Guest[] Guests;
         public static SeatingManager instance;
         public Guest dragGuest;
         public GameObject inventory;
         public GameObject guestPrefab;
-        public Seat overSlot;
 
         public Sprite[] guestHeads;
 
@@ -53,7 +51,7 @@ namespace Seating
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetMouseButtonDown(1) && IsDragging))
+            if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) && IsDragging && !dragGuest.overSeat)
             {
                 ReleaseGuest();
             }
@@ -72,17 +70,8 @@ namespace Seating
                     return;
                 }
             }
-             //Else the Guest came from the GuestList
-            {
-                //Get the ListItems into a list and find uncollapse the item
-                List<GuestListItem> guestList = new List<GuestListItem>();
-                guestList.AddRange(inventory.GetComponentsInChildren<GuestListItem>());
-
-
-                guestList.Find(g => g.relative == dragGuest.relative).Show();
-
-                Destroy(dragGuest.gameObject);
-            }
+            //Else the Guest came from the GuestList
+            ReturnGuestToList(dragGuest);
         }
 
         public void PickUpGuest(GuestListItem item)
@@ -98,6 +87,18 @@ namespace Seating
             dragGuest.StartDrag();
             dragGuest.SetPortrait(item.relative);
             dragGuest.transform.position = Input.mousePosition;
+        }
+
+        public void ReturnGuestToList(Guest guest)
+        {
+            //Get the ListItems into a list and find uncollapse the item
+            List<GuestListItem> guestList = new List<GuestListItem>();
+            guestList.AddRange(inventory.GetComponentsInChildren<GuestListItem>());
+
+
+            guestList.Find(g => g.relative == guest.relative).Show();
+
+            Destroy(guest.gameObject);
         }
     }
 }
