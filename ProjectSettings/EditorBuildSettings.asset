@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f00b39b3cefed764daef119f6a41608e
+  - enabled: 1
+    path: Assets/Scenes/PartyPlanning.unity
+    guid: f87e35588c47b5146bb41e22775d5c92
   m_configObjects: {}
