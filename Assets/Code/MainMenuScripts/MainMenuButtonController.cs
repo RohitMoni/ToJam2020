@@ -21,7 +21,7 @@ public class MainMenuButtonController : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         // Load scene
-        SceneManager.LoadScene("PartyPlanning");
+        SceneManager.LoadScene("IntroScene");
     }
 
     public void OnSettings()
