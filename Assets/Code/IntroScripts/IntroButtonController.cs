@@ -22,6 +22,6 @@ public class IntroButtonController : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         // Load scene
-        SceneManager.LoadScene(Scene.name);
+        SceneManager.LoadScene("PartyPlanning");
     }
 }

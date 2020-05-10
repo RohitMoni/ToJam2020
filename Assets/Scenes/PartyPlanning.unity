@@ -905,6 +905,20 @@ MonoBehaviour:
   left: {fileID: 1968132541}
   right: {fileID: 609080373}
   textAsset: {fileID: 4900000, guid: 2dae902811fb4f640adf7ebcfc7ff920, type: 3}
+  textConversations:
+  - relative: 
+    displayedAnswers: 000000
+  - relative: 
+    displayedAnswers: 000000
+  - relative: 
+    displayedAnswers: 000000
+  - relative: 
+    displayedAnswers: 000000
+  - relative: 
+    displayedAnswers: 000000
+  - relative: 
+    displayedAnswers: 000000
+  currentRelative: 0
 --- !u!114 &420098608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2408,7 +2422,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 336559596}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2985,6 +2999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1538092677}
   - component: {fileID: 1538092678}
+  - component: {fileID: 1538092679}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -3042,6 +3057,18 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
+--- !u!114 &1538092679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538092676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e209988378460cd4db24b65d79cbb7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1582183118
 GameObject:
   m_ObjectHideFlags: 0

@@ -99,11 +99,6 @@ namespace _2020Vision
             
             //Head shape
             Sprite newHead = GetRandomHead();
-            if (newHead == null)
-            {
-                int i = 0;
-                i++;
-            }
             int headIndex = Heads.IndexOf(newHead);
             newGuest.SetPortrait(newHead, headIndex);
 
@@ -111,20 +106,24 @@ namespace _2020Vision
             if (newHead.name.ToLower().Contains("bottom"))
             {
                 Sprite newHair = GetMascBottomHair();
+                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
             }
             else if (newHead.name.ToLower().Contains("oval"))
             {
                 Sprite newHair = GetOvalMascHair();
+                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
             }
             else if (newHead.name.ToLower().Contains("round"))
             {
                 if (Random.value > 0.5)
                 {
                     Sprite newHair = GetRoundFemmeHair();
+                    newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Feminine));
                 }
                 else
                 {
                     Sprite newHair = GetRoundMascHair();
+                    newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
                 }
             }
 

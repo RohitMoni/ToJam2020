@@ -147,13 +147,17 @@ public class DinnerPartyGlobals : MonoBehaviour
     {
         GameObject guest0 = GuestGenerator.Singleton.CreateGuest();
         Seating.Guest granny = guest0.GetComponent<Seating.Guest>();
+        granny.SetName("Granny");
         granny.Head.sprite = GrannySprite;
         granny.Eyes.sprite = null;
+        granny.Eyes.color = Color.clear;
         granny.Hair.sprite = null;
+        granny.Hair.color = Color.clear;
         granny.Mouth.sprite = null;
+        granny.Mouth.color = Color.clear;
         Person person0 = new Person(0)
         {
-            name = "Granny"
+            name = guest0.GetComponent<Seating.Guest>().GetName()
         };
         Guests.Add(guest0);
         Persons.Add(person0);

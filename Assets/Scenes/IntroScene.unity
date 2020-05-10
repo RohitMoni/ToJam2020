@@ -154,9 +154,9 @@ MonoBehaviour:
     type: 3}
   Heads:
   - {fileID: 21300000, guid: 5751a9a9386c5674c9c97cd14a15d5ce, type: 3}
-  - {fileID: 21300000, guid: 614e16a3e37a5b348930e65f648ef579, type: 3}
-  - {fileID: 21300000, guid: 62f239ca1c6bcad4b92e4e72a7013479, type: 3}
-  - {fileID: 21300000, guid: d494306d87989d14c9b32fdd5c7c7992, type: 3}
+  - {fileID: 21300000, guid: 32f56f78bc43a974c881ba35b1839aa4, type: 3}
+  - {fileID: 21300000, guid: 581f05a8f8e382e429623312805a6e1d, type: 3}
+  - {fileID: 21300000, guid: 317d5a30ab093fa40ae42a0de550475a, type: 3}
   - {fileID: 21300000, guid: 95e2ae412362e6844b9fb18029796beb, type: 3}
   Hairs_MascBottom:
   - {fileID: -4488313046570431928, guid: 7a59ede5e575998478d72d5e333acd45, type: 3}
