@@ -4,6 +4,7 @@ namespace _2020Vision
     public class ContributionRequirement : IRequirement
     {
         public int Value { get; set; }
+        public string FeedbackMessage { get; set; }
         public Contribution requiredContribution;
 
         public bool IsMet(RequirementContext context)

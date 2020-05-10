@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using _2020Vision;
 
 public class ScoringStarController : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class ScoringStarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Score(2);
+        var dinnerPartyGlobals = GameObject.Find("Globals").GetComponent<DinnerPartyGlobals>();
+        var numStars = ScoringManager.CalcScoreStars(dinnerPartyGlobals.currentPartyState, dinnerPartyGlobals.requirements);
+        Score(numStars);
     }
 
     void Score(int numStars)

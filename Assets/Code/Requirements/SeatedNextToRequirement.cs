@@ -4,6 +4,7 @@ namespace _2020Vision
     public class SeatedNextToRequirement : IRequirement
     {
         public int Value { get; set; }
+        public string FeedbackMessage { get; set; }
         public Person PersonA { get; set; }
         public Person PersonB { get; set; }
 
