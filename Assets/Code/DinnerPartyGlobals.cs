@@ -7,7 +7,9 @@ public class DinnerPartyGlobals : MonoBehaviour
     [HideInInspector]
     public PartyState currentPartyState;
 
-    public List<Person> guests = new List<Person>();
+    public List<Person> Persons = new List<Person>();
+    public List<GameObject> Guests = new List<GameObject>();
+    public Sprite GrannySprite;
 
     // Hard coded desired state for one scenario. This will need to be removed if we do multiple scenarios / generated scenarios
     public List<IRequirement> requirements = new List<IRequirement>()
@@ -139,5 +141,34 @@ public class DinnerPartyGlobals : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);    
+    }
+
+    private void Start()
+    {
+        GameObject guest0 = GuestGenerator.Singleton.CreateGuest();
+        Seating.Guest granny = guest0.GetComponent<Seating.Guest>();
+        granny.Head.sprite = GrannySprite;
+        granny.Eyes.sprite = null;
+        granny.Hair.sprite = null;
+        granny.Mouth.sprite = null;
+        Person person0 = new Person(0)
+        {
+            name = "Granny"
+        };
+        Guests.Add(guest0);
+        Persons.Add(person0);
+        DontDestroyOnLoad(guest0);
+
+        for (int i = 1; i < 6; ++i)
+        {
+            GameObject guest = GuestGenerator.Singleton.CreateGuest();
+            Person person = new Person(i)
+            {
+                name = guest.GetComponent<Seating.Guest>().GetName()
+            };
+            Guests.Add(guest);
+            Persons.Add(person);
+            DontDestroyOnLoad(guest);
+        }
     }
 }
