@@ -14,6 +14,7 @@ public class DinnerPartyGlobals : MonoBehaviour
     {
         new SeatedNextToRequirement() {
             Value = 10,
+            FeedbackMessage = "2 is disappointed they weren't seated next to 0",
             PersonA = new Person(2),
             PersonB = new Person(0),
         },
