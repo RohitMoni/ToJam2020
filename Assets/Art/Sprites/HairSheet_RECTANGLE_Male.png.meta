@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: e00a811aa2e497b4cb2586377a1f8efa
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7600254507015589514
+    second: HairSheet_RECTANGLE_Male_0
+  - first:
+      213: -9011122520156839546
+    second: HairSheet_RECTANGLE_Male_1
+  - first:
+      213: 7818304878398876328
+    second: HairSheet_RECTANGLE_Male_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,11 +94,74 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: HairSheet_RECTANGLE_Male_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 178
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67136c23bc8768690800000000000000
+      internalID: -7600254507015589514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HairSheet_RECTANGLE_Male_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 178
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68167869fcf02f280800000000000000
+      internalID: -9011122520156839546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HairSheet_RECTANGLE_Male_2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 178
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa2bae1dd2308c60800000000000000
+      internalID: 7818304878398876328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 719f1cc64909431449d44e2104c9df98
     internalID: 0
     vertices: []
     indices: 

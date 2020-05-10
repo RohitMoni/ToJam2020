@@ -155,8 +155,8 @@ MonoBehaviour:
   Heads:
   - {fileID: 21300000, guid: 5751a9a9386c5674c9c97cd14a15d5ce, type: 3}
   - {fileID: 21300000, guid: 32f56f78bc43a974c881ba35b1839aa4, type: 3}
-  - {fileID: 21300000, guid: 581f05a8f8e382e429623312805a6e1d, type: 3}
-  - {fileID: 21300000, guid: 317d5a30ab093fa40ae42a0de550475a, type: 3}
+  - {fileID: 21300000, guid: e8ea9ca11940d9c4a83ef5b1ffb11ebe, type: 3}
+  - {fileID: 21300000, guid: 614e16a3e37a5b348930e65f648ef579, type: 3}
   - {fileID: 21300000, guid: 95e2ae412362e6844b9fb18029796beb, type: 3}
   Hairs_MascBottom:
   - {fileID: -4488313046570431928, guid: 7a59ede5e575998478d72d5e333acd45, type: 3}
@@ -168,6 +168,10 @@ MonoBehaviour:
   - {fileID: -4111347716134112349, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
   - {fileID: -9014539619383268454, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
   - {fileID: -7176622265857704085, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  Hairs_MascRect:
+  - {fileID: -7600254507015589514, guid: e00a811aa2e497b4cb2586377a1f8efa, type: 3}
+  - {fileID: -9011122520156839546, guid: e00a811aa2e497b4cb2586377a1f8efa, type: 3}
+  - {fileID: 7818304878398876328, guid: e00a811aa2e497b4cb2586377a1f8efa, type: 3}
   Hairs_MascRound:
   - {fileID: -1640050788660673325, guid: 3ba3d78ca3818be40a034d3d54c67756, type: 3}
   - {fileID: 6316157496736321459, guid: 3ba3d78ca3818be40a034d3d54c67756, type: 3}
@@ -236,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Guests: []
-  GrannySprite: {fileID: 0}
+  GrannySprite: {fileID: 21300000, guid: 021ad1ff65b1b364bb179a01eea066eb, type: 3}
 --- !u!4 &323991865
 Transform:
   m_ObjectHideFlags: 0
@@ -454,6 +458,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 362221256}
   transitionTime: 1
+  Scene:
+    m_Handle: 0
 --- !u!4 &677990783
 Transform:
   m_ObjectHideFlags: 0

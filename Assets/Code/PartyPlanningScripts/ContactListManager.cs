@@ -16,7 +16,7 @@ public class ContactListManager : MonoBehaviour
             Seating.Guest globalGuest = globals.Guests[i].GetComponent<Seating.Guest>();
 
             guest.SetPortrait(globalGuest.Head.sprite, i);
-
+            guest.Hair.rectTransform.rect.Set(guest.Hair.sprite.rect.x, guest.Hair.sprite.rect.y, guest.Hair.sprite.rect.width, guest.Hair.sprite.rect.height);
             guest.SetHair(globalGuest.Hair.sprite);
             guest.Hair.color = globalGuest.Hair.color;
             guest.SetEyes(globalGuest.Eyes.sprite);

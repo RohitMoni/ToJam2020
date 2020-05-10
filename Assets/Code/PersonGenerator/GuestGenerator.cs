@@ -19,6 +19,7 @@ namespace _2020Vision
         public List<Sprite> Heads;
         public List<Sprite> Hairs_MascBottom;
         public List<Sprite> Hairs_MascOval;
+        public List<Sprite> Hairs_MascRect;
         public List<Sprite> Hairs_MascRound;
         public List<Sprite> Hairs_FemmeRound;
         public List<Sprite> Eyes;
@@ -46,6 +47,7 @@ namespace _2020Vision
             if (singleton != null)
             {
                 Destroy(this);
+                return;
             }
 
             DontDestroyOnLoad(this);
@@ -69,6 +71,11 @@ namespace _2020Vision
         private Sprite GetOvalMascHair()
         {
             return Hairs_MascOval[Random.Range(0, Hairs_MascOval.Count - 1)];
+        }
+
+        private Sprite GetRectMascHair()
+        {
+            return Hairs_MascRect[Random.Range(0, Hairs_MascRect.Count - 1)];
         }
 
         private Sprite GetRoundMascHair()
@@ -103,29 +110,36 @@ namespace _2020Vision
             newGuest.SetPortrait(newHead, headIndex);
 
             //Hair
+            Sprite newHair = null;
             if (newHead.name.ToLower().Contains("bottom"))
             {
-                Sprite newHair = GetMascBottomHair();
+                newHair = GetMascBottomHair();
                 newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
             }
             else if (newHead.name.ToLower().Contains("oval"))
             {
-                Sprite newHair = GetOvalMascHair();
+                newHair = GetOvalMascHair();
+                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
+            }
+            else if (newHead.name.ToLower().Contains("rect"))
+            {
+                newHair = GetRectMascHair();
                 newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
             }
             else if (newHead.name.ToLower().Contains("round"))
             {
                 if (Random.value > 0.5)
                 {
-                    Sprite newHair = GetRoundFemmeHair();
+                    newHair = GetRoundFemmeHair();
                     newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Feminine));
                 }
                 else
                 {
-                    Sprite newHair = GetRoundMascHair();
+                    newHair = GetRoundMascHair();
                     newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
                 }
             }
+            newGuest.SetHair(newHair);
 
             //Mouth shape
             newGuest.SetMouth(GetRandomMouths());
