@@ -53,12 +53,12 @@ namespace _2020Vision
 
         private Sprite GetRandomEyes()
         {
-            return Eyes[Random.Range(0, Heads.Count - 1)];
+            return Eyes[Random.Range(0, Eyes.Count - 1)];
         }
 
         private Sprite GetRandomMouths()
         {
-            return Mouths[Random.Range(0, Heads.Count - 1)];
+            return Mouths[Random.Range(0, Mouths.Count - 1)];
         }
 
         public Guest CreatePerson()
