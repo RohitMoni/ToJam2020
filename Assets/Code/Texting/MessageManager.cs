@@ -17,6 +17,7 @@ public class TextConversation
 {
     public string relative;
     public List<string[]>[] texts = new List<string[]>[4];
+    public bool[] displayedAnswers = new bool[3];
 }
 
 public class MessageManager : MonoBehaviour
@@ -28,7 +29,8 @@ public class MessageManager : MonoBehaviour
     private const string SetRegex = @"(?<Category>\w*):\r\n(?<Content>(\w*:.*\r\n)*)";
     private const string ConversationRegex = @"(?<Relative>\w*): (?<Text>.*)\r\n";
     [SerializeField] private TextAsset textAsset;
-    public Dictionary<string, TextConversation> textConversations = new Dictionary<string, TextConversation>();
+    public TextConversation[] textConversations = new TextConversation[6];
+    public int currentRelative;
 
     private void Awake()
     {
@@ -77,34 +79,11 @@ public class MessageManager : MonoBehaviour
             }
         }
 
+        //Grab the actual relative name from the generator
         inputConversation.relative = "Granny";
-        textConversations.Add(inputConversation.relative, inputConversation);
-        DisplayTexts(inputConversation.relative, (int)TextType.History);
+        textConversations[0] = inputConversation;
+        DisplayTexts(0, (int)TextType.History);
     }
-
-    //public void AddMessage()
-    //{
-    //    string messageString = textConversation.textHistory[Random.Range(0, textConversation.textHistory.Count)][1];
-
-    //    GameObject leftMessage = Instantiate(messageLeftPrefab, left);
-    //    var leftTextMesh = leftMessage.GetComponentInChildren<UnityEngine.UI.Text>();
-
-    //    GameObject rightMessage = Instantiate(messageRightPrefab, right);
-    //    var rightTextMesh = rightMessage.GetComponentInChildren<UnityEngine.UI.Text>();
-
-    //    leftTextMesh.text = messageString;
-    //    rightTextMesh.text = messageString;
-
-    //    if (leftRight)
-    //    {
-    //        rightMessage.GetComponent<CanvasGroup>().alpha = 0;
-    //    }
-    //    else
-    //    {
-    //        leftMessage.GetComponent<CanvasGroup>().alpha = 0;
-    //    }
-    //    leftRight = !leftRight;
-    //}
 
     public void DisplayMessage(string sender, string message)
     {
@@ -129,10 +108,11 @@ public class MessageManager : MonoBehaviour
 
     public void ChooseMessage(int index)
     {
-        DisplayTexts("Granny", index + 1);
+        if(!textConversations[currentRelative].displayedAnswers[index])
+            DisplayTexts(currentRelative, index + 1);
     }
 
-    public void DisplayTexts(string relative, int textType)
+    public void DisplayTexts(int relative, int textType)
     {
         for (int i = 0; i < textConversations[relative].texts[textType].Count; i++)
         {
