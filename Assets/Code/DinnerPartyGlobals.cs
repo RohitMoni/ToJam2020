@@ -168,6 +168,7 @@ public class DinnerPartyGlobals : MonoBehaviour
             };
             Guests.Add(guest);
             Persons.Add(person);
+            DontDestroyOnLoad(guest);
         }
     }
 }
