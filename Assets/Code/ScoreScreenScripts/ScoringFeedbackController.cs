@@ -18,7 +18,7 @@ public class ScoringFeedbackController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AddFeedbackToQueue("Grandma didn't like sitting next to Anne");
+        //AddFeedbackToQueue("Grandma didn't like sitting next to Anne");
     }
 
     void AddFeedbackToQueue(string feedback)
