@@ -15,6 +15,10 @@ namespace _2020Vision
         private static GuestGenerator singleton = null;
 
         public List<Sprite> Heads;
+        public List<Sprite> Hair_MascBottom;
+        public List<Sprite> Hair_MascOval;
+        public List<Sprite> Hair_MascRound;
+        public List<Sprite> Hair_FemmeRound;
         public List<Sprite> Eyes;
         public List<Sprite> Mouths;
 
@@ -35,15 +39,19 @@ namespace _2020Vision
             }
         }
 
-        private GuestGenerator()
+        private void Awake()
         {
-            if (Singleton != null)
+            if (singleton != null)
             {
                 Destroy(this);
             }
 
             DontDestroyOnLoad(this);
             Singleton = this;
+        }
+
+        private GuestGenerator()
+        {
         }
 
         private Sprite GetRandomHead()

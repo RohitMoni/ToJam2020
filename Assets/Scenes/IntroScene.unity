@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 196833015}
   - component: {fileID: 196833014}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GuestGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +150,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1299804a961cb4590423c3ab384525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Hair_MascOval:
+  - {fileID: 3010013710455593272, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -4981795604393928950, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -4111347716134112349, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -9014539619383268454, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -7176622265857704085, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  Hair_MascRound: []
+  Hair_FemmeRound: []
   Heads:
   - {fileID: 21300000, guid: 5751a9a9386c5674c9c97cd14a15d5ce, type: 3}
   - {fileID: 21300000, guid: 858e2721f2d98524a9d0d3f913a8f00a, type: 3}

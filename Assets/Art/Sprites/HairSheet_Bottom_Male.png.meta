@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 3ba3d78ca3818be40a034d3d54c67756
+guid: 7a59ede5e575998478d72d5e333acd45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1640050788660673325
-    second: HairSheet_ROUND_Male_0
+      213: -4488313046570431928
+    second: HairSheet_Bottom_Male_0
   - first:
-      213: 6316157496736321459
-    second: HairSheet_ROUND_Male_1
+      213: -26034110289912696
+    second: HairSheet_Bottom_Male_1
   - first:
-      213: -1793354348292597408
-    second: HairSheet_ROUND_Male_2
-  - first:
-      213: -5963945449246318634
-    second: HairSheet_ROUND_Male_3
+      213: 3875800767800958101
+    second: HairSheet_Bottom_Male_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HairSheet_ROUND_Male_0
+      name: HairSheet_Bottom_Male_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 225
-        height: 250
+        width: 178
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,20 +110,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d408404f7e5d39e0800000000000000
-      internalID: -1640050788660673325
+      spriteID: 84a0b62701f46b1c0800000000000000
+      internalID: -4488313046570431928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HairSheet_ROUND_Male_1
+      name: HairSheet_Bottom_Male_1
       rect:
         serializedVersion: 2
-        x: 225
+        x: 178
         y: 0
-        width: 225
-        height: 250
+        width: 178
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf836267cf77a750800000000000000
-      internalID: 6316157496736321459
+      spriteID: 88c50285d1283aff0800000000000000
+      internalID: -26034110289912696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HairSheet_ROUND_Male_2
+      name: HairSheet_Bottom_Male_2
       rect:
         serializedVersion: 2
-        x: 450
+        x: 356
         y: 0
-        width: 225
-        height: 250
+        width: 178
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,29 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0691e99c8b9bc17e0800000000000000
-      internalID: -1793354348292597408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HairSheet_ROUND_Male_3
-      rect:
-        serializedVersion: 2
-        x: 675
-        y: 0
-        width: 225
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6df9dd5563fcb3da0800000000000000
-      internalID: -5963945449246318634
+      spriteID: 59c56f0734c99c530800000000000000
+      internalID: 3875800767800958101
       vertices: []
       indices: 
       edges: []
@@ -185,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 09f027e3fbda9e44f8e4e11505a5fcc4
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
