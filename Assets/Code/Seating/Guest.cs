@@ -20,6 +20,9 @@ namespace Seating
         void Awake()
         {
             Head = transform.GetChild(0).GetComponent<Image>();
+            Eyes = transform.GetChild(1).GetComponent<Image>();
+            Mouth = transform.GetChild(2).GetComponent<Image>();
+            Hair = transform.GetChild(3).GetComponent<Image>();
         }
 
         public void SetPortrait(int relativeIndex)

@@ -14,6 +14,8 @@ namespace _2020Vision
     {
         private static GuestGenerator singleton = null;
 
+        public GameObject GuestPrefab;
+
         public List<Sprite> Heads;
         public List<Sprite> Hairs_MascBottom;
         public List<Sprite> Hairs_MascOval;
@@ -89,9 +91,11 @@ namespace _2020Vision
             return Mouths[Random.Range(0, Mouths.Count - 1)];
         }
 
-        public Guest CreatePerson()
+        public GameObject CreateGuest()
         {
-            Guest newGuest = new Guest();
+            GameObject newGuestPrefab = Instantiate(GuestPrefab);
+
+            Guest newGuest = newGuestPrefab.GetComponent<Guest>();
 
             //Head shape
             Sprite newHead = GetRandomHead();
@@ -125,7 +129,7 @@ namespace _2020Vision
             //Eye shape
             newGuest.SetEyes(GetRandomEyes());
 
-            return newGuest;
+            return newGuestPrefab;
         }
     }
 }
