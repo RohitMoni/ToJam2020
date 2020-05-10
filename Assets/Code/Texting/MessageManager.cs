@@ -17,7 +17,6 @@ public class TextConversation
 {
     public string relative;
     public List<string[]>[] texts = new List<string[]>[4];
-    //public List<string[]> textHistory, seatingReq, foodReq, bringing;
 }
 
 public class MessageManager : MonoBehaviour
@@ -29,7 +28,7 @@ public class MessageManager : MonoBehaviour
     private const string SetRegex = @"(?<Category>\w*):\r\n(?<Content>(\w*:.*\r\n)*)";
     private const string ConversationRegex = @"(?<Relative>\w*): (?<Text>.*)\r\n";
     [SerializeField] private TextAsset textAsset;
-    public TextConversation textConversation;
+    public Dictionary<string, TextConversation> textConversations = new Dictionary<string, TextConversation>();
 
     private void Awake()
     {
@@ -45,7 +44,7 @@ public class MessageManager : MonoBehaviour
     public void Start()
     {
         string inputText = textAsset.text;
-        textConversation = new TextConversation();
+        TextConversation inputConversation = new TextConversation();
         Regex setRegex = new Regex(SetRegex);
         Regex convoRegex = new Regex(ConversationRegex);
         MatchCollection setMatches = setRegex.Matches(inputText);
@@ -64,23 +63,23 @@ public class MessageManager : MonoBehaviour
             switch(setMatches[i].Groups["Category"].Value)
             {
                 case "History":
-                    textConversation.texts[(int)TextType.History] = conversation;
+                    inputConversation.texts[(int)TextType.History] = conversation;
                     break;
                 case "Seating":
-                    textConversation.texts[(int)TextType.SeatingReq] = conversation;
+                    inputConversation.texts[(int)TextType.SeatingReq] = conversation;
                     break;
                 case "Food":
-                    textConversation.texts[(int)TextType.FoodReq] = conversation;
+                    inputConversation.texts[(int)TextType.FoodReq] = conversation;
                     break;
                 case "Bringing":
-                    textConversation.texts[(int)TextType.Bringing] = conversation;
+                    inputConversation.texts[(int)TextType.Bringing] = conversation;
                     break;
             }
         }
 
-        textConversation.relative = "Granny";
-
-       DisplayTexts(textConversation.relative, TextType.History);
+        inputConversation.relative = "Granny";
+        textConversations.Add(inputConversation.relative, inputConversation);
+        DisplayTexts(inputConversation.relative, (int)TextType.History);
     }
 
     //public void AddMessage()
@@ -130,14 +129,14 @@ public class MessageManager : MonoBehaviour
 
     public void ChooseMessage(int index)
     {
-        Debug.Log("Chose Message " + index);
+        DisplayTexts("Granny", index + 1);
     }
 
-    public void DisplayTexts(string relative, TextType textType)
+    public void DisplayTexts(string relative, int textType)
     {
-        for (int i = 0; i < textConversation.texts[(int)textType].Count; i++)
+        for (int i = 0; i < textConversations[relative].texts[textType].Count; i++)
         {
-            DisplayMessage(textConversation.texts[(int)textType][i][0], textConversation.texts[(int)textType][i][1]);
+            DisplayMessage(textConversations[relative].texts[textType][i][0], textConversations[relative].texts[textType][i][1]);
         }
     }
 }
