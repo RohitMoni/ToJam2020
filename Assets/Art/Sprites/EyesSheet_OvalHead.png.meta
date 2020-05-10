@@ -21,24 +21,6 @@ TextureImporter:
       213: 8325357074868669084
     second: EyesSheet_OvalHead_5
   - first:
-      213: 141031361048967576
-    second: EyesSheet_OvalHead_6
-  - first:
-      213: -6123349547490835795
-    second: EyesSheet_OvalHead_7
-  - first:
-      213: 1767101337265269225
-    second: EyesSheet_OvalHead_8
-  - first:
-      213: -4229631228986797634
-    second: EyesSheet_OvalHead_9
-  - first:
-      213: -2009090915438878075
-    second: EyesSheet_OvalHead_10
-  - first:
-      213: -1129021066316919336
-    second: EyesSheet_OvalHead_11
-  - first:
       213: 2345404772281430857
     second: EyesSheet_OvalHead_0
   - first:
@@ -269,7 +251,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 5a1490089a2b476469a3d1bc2fc202b3
     internalID: 0
     vertices: []
     indices: 

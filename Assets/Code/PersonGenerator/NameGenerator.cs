@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace _2020Vision
 {
     //Class for getting a random name for a person.
-    public class NameGenerator
+    public static class NameGenerator
     {
         private static readonly List<string> MascNames40s = new List<string>
         {
