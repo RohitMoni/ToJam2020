@@ -5,7 +5,7 @@ namespace _2020Vision
     // This requirement checks that the required food is contained within a set of food passed in by context
     public class TotalFoodRequirement : IRequirement
     {
-        public int Value { get; }
+        public int Value { get; set; }
         public FoodArrangement requiredFood;
 
         public bool IsMet(RequirementContext context)
@@ -20,7 +20,7 @@ namespace _2020Vision
                 for (int j = 0; j < duplicateFood.Count; ++j)
                 {
                     var foodInArrangement = duplicateFood[j];
-                    if (required == foodInArrangement)
+                    if (foodInArrangement.DoesInclude(required))
                     {
                         // We found the required food in the arrangement, check the next one
                         // Make sure we don't count this food in the arrangement twice by removing it from the list for next time

@@ -4,7 +4,13 @@ namespace _2020Vision
 {
     public class Person : IEquatable<Person>
     {
+        public int id;
         public string name;
+
+        public Person(int _id)
+        {
+            id = _id;
+        }
 
         public override bool Equals(object obj)
         {
@@ -34,12 +40,12 @@ namespace _2020Vision
             // Return true if the fields match.
             // Note that the base class is not invoked because it is
             // System.Object, which defines Equals as reference equality.
-            return String.Equals(name, p.name, StringComparison.OrdinalIgnoreCase);
+            return id == p.id;
         }
 
         public override int GetHashCode()
         {
-            return name.GetHashCode();
+            return id.GetHashCode();
         }
 
         public static bool operator ==(Person lhs, Person rhs)
@@ -56,6 +62,7 @@ namespace _2020Vision
                 // Only the left side is null.
                 return false;
             }
+
             // Equals handles case of null on right side.
             return lhs.Equals(rhs);
         }
