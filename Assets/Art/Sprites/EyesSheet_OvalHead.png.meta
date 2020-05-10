@@ -1,12 +1,66 @@
 fileFormatVersion: 2
 guid: 062e484ebb3e67640a9c7be2bd9c30f6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2707261361992854720
+    second: EyesSheet_OvalHead_0
+  - first:
+      213: -1130797135602975256
+    second: EyesSheet_OvalHead_1
+  - first:
+      213: 8658432270015526040
+    second: EyesSheet_OvalHead_2
+  - first:
+      213: 8815181808923826722
+    second: EyesSheet_OvalHead_3
+  - first:
+      213: 4621909134557189892
+    second: EyesSheet_OvalHead_4
+  - first:
+      213: 8325357074868669084
+    second: EyesSheet_OvalHead_5
+  - first:
+      213: 141031361048967576
+    second: EyesSheet_OvalHead_6
+  - first:
+      213: -6123349547490835795
+    second: EyesSheet_OvalHead_7
+  - first:
+      213: 1767101337265269225
+    second: EyesSheet_OvalHead_8
+  - first:
+      213: -4229631228986797634
+    second: EyesSheet_OvalHead_9
+  - first:
+      213: -2009090915438878075
+    second: EyesSheet_OvalHead_10
+  - first:
+      213: -1129021066316919336
+    second: EyesSheet_OvalHead_11
+  - first:
+      213: 2345404772281430857
+    second: EyesSheet_OvalHead_0
+  - first:
+      213: -4157418891497293358
+    second: EyesSheet_OvalHead_1
+  - first:
+      213: -2232145450299426980
+    second: EyesSheet_OvalHead_2
+  - first:
+      213: -2414437624102682779
+    second: EyesSheet_OvalHead_3
+  - first:
+      213: -7921535385885743047
+    second: EyesSheet_OvalHead_4
+  - first:
+      213: 6665179595022612668
+    second: EyesSheet_OvalHead_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +88,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +103,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -71,13 +125,151 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EyesSheet_OvalHead_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9433752c63d8c8020800000000000000
+      internalID: 2345404772281430857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyesSheet_OvalHead_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d93ecd8b81ed46c0800000000000000
+      internalID: -4157418891497293358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyesSheet_OvalHead_2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57f5e31a83d501e0800000000000000
+      internalID: -2232145450299426980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyesSheet_OvalHead_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f750be5c13e7ed0800000000000000
+      internalID: -2414437624102682779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyesSheet_OvalHead_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938e790698d011290800000000000000
+      internalID: -7921535385885743047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyesSheet_OvalHead_5
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 0
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8318d27897f7c50800000000000000
+      internalID: 6665179595022612668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
