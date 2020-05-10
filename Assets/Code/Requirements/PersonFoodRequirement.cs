@@ -4,6 +4,7 @@ namespace _2020Vision
     public class PersonFoodRequirement : IRequirement
     {
         public int Value { get; set; }
+        public string FeedbackMessage { get; set; }
         public Food requiredFood;
 
         public bool IsMet(RequirementContext context)
