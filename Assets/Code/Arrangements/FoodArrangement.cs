@@ -7,24 +7,33 @@ namespace _2020Vision
     {
         Appetizer,
         Main,
-        Dessert
+        Dessert,
+        Cutlery,
+        Drinks,
+        None
     }
 
     // Not mutually exclusive. Food can have multiple tags
     public enum FoodTag
     {
-        Drinks,
         Veg,
         NonVeg,
         Fish,
         Vegan,
         GlutenFree,
     }
-
+    
     public class Food
     {
-        public FoodCourse course;
-        public List<FoodTag> tags;
+        public FoodCourse course = FoodCourse.None;
+        public HashSet<FoodTag> tags = new HashSet<FoodTag>();
+
+        // Need to use this for a lot of the requirements vs == because of the inclusive nature of tags
+        // Ex: A Fish dish requirement is met by a NonVeg Fish dish.
+        public bool DoesInclude(Food other)
+        {
+            return course == other.course && tags.IsSupersetOf(other.tags);
+        }
     }
 
     // A food arrangement, including the number and types of food
