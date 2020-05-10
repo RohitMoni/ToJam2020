@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using _2020Vision;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -18,7 +19,18 @@ public class ScoringFeedbackController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //AddFeedbackToQueue("Grandma didn't like sitting next to Anne");
+        var dinnerPartyGlobals = GameObject.Find("Globals").GetComponent<DinnerPartyGlobals>();
+        var feedback = ScoringManager.GetFeedbackStrings(dinnerPartyGlobals.currentPartyState, dinnerPartyGlobals.requirements);
+        ReplaceNamesInFeedbackStrings(feedback, dinnerPartyGlobals.guests);
+        AddFeedbackToQueue(feedback);
+    }
+
+    void AddFeedbackToQueue(List<string> feedback)
+    {
+        for (int i = 0; i < feedback.Count; ++i)
+        {
+            AddFeedbackToQueue(feedback[i]);
+        }
     }
 
     void AddFeedbackToQueue(string feedback)
@@ -53,5 +65,17 @@ public class ScoringFeedbackController : MonoBehaviour
         var newTextObject = GameObject.Instantiate(feedbackTextTemplate, feedbackContent.transform);
         newTextObject.GetComponent<TextMeshProUGUI>().text = feedback;
         newTextObject.SetActive(true);
+    }
+
+    void ReplaceNamesInFeedbackStrings(List<string> rawFeedback, List<Person> persons)
+    {
+        for (int i = 0; i < rawFeedback.Count; ++i)
+        {
+            var rawFeedbackString = rawFeedback[i];
+            for (int j = 0; j < persons.Count; ++j)
+            {
+                rawFeedbackString = rawFeedbackString.Replace(persons[j].id.ToString(), persons[j].name);
+            }
+        }
     }
 }

@@ -44,5 +44,26 @@ namespace _2020Vision
 
             return evalScore / maxScore;
         }
+
+        // Returns a list of feedback strings
+        public static List<string> GetFeedbackStrings(PartyState state, List<IRequirement> requirements)
+        {
+            var reqContext = new RequirementContext()
+            {
+                partyState = state
+            };
+
+            var feedback = new List<String>();
+            for (int i = 0; i < requirements.Count; ++i)
+            {
+                var req = requirements[i];
+                if (!req.IsMet(reqContext))
+                {
+                    feedback.Add(req.FeedbackMessage);
+                }
+            }
+
+            return feedback;
+        }
     }
 }

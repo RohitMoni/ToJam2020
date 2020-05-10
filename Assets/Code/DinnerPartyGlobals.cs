@@ -7,6 +7,8 @@ public class DinnerPartyGlobals : MonoBehaviour
     [HideInInspector]
     public PartyState currentPartyState;
 
+    public List<Person> guests = new List<Person>();
+
     // Hard coded desired state for one scenario. This will need to be removed if we do multiple scenarios / generated scenarios
     public List<IRequirement> requirements = new List<IRequirement>()
     {

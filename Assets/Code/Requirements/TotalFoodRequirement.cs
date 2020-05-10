@@ -6,6 +6,7 @@ namespace _2020Vision
     public class TotalFoodRequirement : IRequirement
     {
         public int Value { get; set; }
+        public string FeedbackMessage { get; set; }
         public FoodArrangement requiredFood;
 
         public bool IsMet(RequirementContext context)
