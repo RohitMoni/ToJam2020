@@ -9,7 +9,12 @@ public class ScoringStarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(TriggerStarScoringDelayed(3, starScoreDelay));
+        Score(2);
+    }
+
+    void Score(int numStars)
+    {
+        StartCoroutine(TriggerStarScoringDelayed(numStars, starScoreDelay));
     }
 
     IEnumerator TriggerStarScoringDelayed(int numStars, float delay)
