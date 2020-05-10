@@ -27,7 +27,7 @@ public class DinnerPartyGlobals : MonoBehaviour
         new SeatedAwayFromRequirement()
         {
             Value = 10,
-            FeedbackMessage = "1, upon arriving late, noticed the seating arrangement had them beside 3. Granny asked later in the evening why 1 never showed up.",
+            FeedbackMessage = "1, upon arriving late, noticed the seating arrangement had 3 besides them. Granny asked later in the evening why 1 never showed up.",
             PersonA = new Person(1),
             PersonB = new Person(3),
         },
@@ -41,7 +41,7 @@ public class DinnerPartyGlobals : MonoBehaviour
         new ContributionRequirement()
         {
             Value = 10,
-            FeedbackMessage = "1 showed up just as dessert started, only to have a call shortly afterwards. ??? The dessert was nowhere to be found.",
+            FeedbackMessage = "1 showed up just as dessert started, only to have a call shortly afterwards. 0 noticed that 1's dessert wasn't present, but couldn't mention it as 1 was constantly on the phone.",
             requiredContribution = new Contribution()
             {
                 person = new Person(1),
@@ -54,7 +54,7 @@ public class DinnerPartyGlobals : MonoBehaviour
         new ContributionRequirement()
         {
             Value = 10,
-            FeedbackMessage = "Even though 2 had ranted for hours about their three-layer bean dip, upon the beginning of the meal it was nowhere to be found. 2 blamed the lack of veggies for some reason.",
+            FeedbackMessage = "Even though 2 had ranted for hours about the three-layer bean dip, upon the beginning of the meal it was nowhere to be found. 2 blamed the lack of veggies for some reason.",
             requiredContribution = new Contribution()
             {
                 person = new Person(2),
@@ -67,7 +67,7 @@ public class DinnerPartyGlobals : MonoBehaviour
         new ContributionRequirement()
         {
             Value = 10,
-            FeedbackMessage = "??? Somehow, with so little to bring, 4 couldn't even come through to bring the cutlery. You were only able to salvage this by quickly buying plastic forks. 4 broke theirs instantly.",
+            FeedbackMessage = "Setting up the table before the meal, 3 seemingly forgot the cutlery that was promised.  Some joked about not giving 3 cutlery to prove their point that 3 needed to learn to remember things.",
             requiredContribution = new Contribution()
             {
                 person = new Person(3),
@@ -80,7 +80,7 @@ public class DinnerPartyGlobals : MonoBehaviour
         new ContributionRequirement()
         {
             Value = 10,
-            FeedbackMessage = "??? 4 brought drinks, but didn't seem to realize that drinks were supposed to be for everyone, not just for Relative 5. Everyone got to drink water.",
+            FeedbackMessage = "Even though 4 was so excited about bringing drinks, upon arrival all of 4's drinks were empty.  4 apologized while hiccupping to roaring laughter.",
             requiredContribution = new Contribution()
             {
                 person = new Person(4),
@@ -93,7 +93,7 @@ public class DinnerPartyGlobals : MonoBehaviour
         new ContributionRequirement()
         {
             Value = 10,
-            FeedbackMessage = "Unfortunately, 5 wasn't able to bring their special turkey, ??? so there wasn't any main dish for the reunion.  Some breathed a sigh of relief that they wouldn't have to try it, others furious that they didn't.",
+            FeedbackMessage = "Unfortunately, 5 wasn't able to bring the special turkey.  Some breathed a sigh of relief that they wouldn't have to try it, others furious that they didn't.",
             requiredContribution = new Contribution()
             {
                 person = new Person(5),

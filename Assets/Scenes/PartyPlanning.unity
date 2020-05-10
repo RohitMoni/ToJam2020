@@ -852,9 +852,6 @@ MonoBehaviour:
     type: 3}
   left: {fileID: 1968132541}
   right: {fileID: 609080373}
-  textAsset: {fileID: 4900000, guid: 2dae902811fb4f640adf7ebcfc7ff920, type: 3}
-  textConversation:
-    relative: 
 --- !u!114 &420098608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1526,8 +1523,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1807216668}
   m_HandleRect: {fileID: 1807216667}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.9981689
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1654,6 +1651,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1538092677}
     m_Modifications:
+    - target: {fileID: 841484160992102315, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -194.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 841484160992102315, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 75.09686
+      objectReference: {fileID: 0}
     - target: {fileID: 1294727845766198309, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1762,7 +1769,7 @@ PrefabInstance:
     - target: {fileID: 2042201219171589314, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2042201219171589314, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
         type: 3}
@@ -1772,22 +1779,43 @@ PrefabInstance:
     - target: {fileID: 2042201219171589314, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2042201219171589314, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2042201219171589314, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2042201219171589314, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
+        type: 3}
+      propertyPath: m_text
+      value: Granny
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042201219171589314, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 31.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514998535007632548, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -45.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402425342326722370, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 021ad1ff65b1b364bb179a01eea066eb,
+        type: 3}
     - target: {fileID: 7645847811951613532, guid: 2323c9fb21f4938459b7a2fd8503bbaa,
         type: 3}
       propertyPath: m_Name
-      value: contact
+      value: Granny
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2323c9fb21f4938459b7a2fd8503bbaa, type: 3}
@@ -1872,8 +1900,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 336559597}
   m_HandleRect: {fileID: 336559596}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2532,7 +2560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000605762}
+  m_AnchoredPosition: {x: 0, y: 0.000044102333}
   m_SizeDelta: {x: 0, y: 465.49634}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1538092678

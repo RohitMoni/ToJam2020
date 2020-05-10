@@ -121,6 +121,91 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &196833013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196833015}
+  - component: {fileID: 196833014}
+  m_Layer: 0
+  m_Name: GuestGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &196833014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196833013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a1299804a961cb4590423c3ab384525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GuestPrefab: {fileID: 6644111706264189022, guid: 15badb56db227ac44aa70c88b26f7ae9,
+    type: 3}
+  Heads:
+  - {fileID: 21300000, guid: 5751a9a9386c5674c9c97cd14a15d5ce, type: 3}
+  - {fileID: 21300000, guid: 858e2721f2d98524a9d0d3f913a8f00a, type: 3}
+  - {fileID: 21300000, guid: 62f239ca1c6bcad4b92e4e72a7013479, type: 3}
+  - {fileID: 21300000, guid: d494306d87989d14c9b32fdd5c7c7992, type: 3}
+  - {fileID: 21300000, guid: 95e2ae412362e6844b9fb18029796beb, type: 3}
+  Hairs_MascBottom:
+  - {fileID: -4488313046570431928, guid: 7a59ede5e575998478d72d5e333acd45, type: 3}
+  - {fileID: -26034110289912696, guid: 7a59ede5e575998478d72d5e333acd45, type: 3}
+  - {fileID: 3875800767800958101, guid: 7a59ede5e575998478d72d5e333acd45, type: 3}
+  Hairs_MascOval:
+  - {fileID: 3010013710455593272, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -4981795604393928950, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -4111347716134112349, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -9014539619383268454, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  - {fileID: -7176622265857704085, guid: 47e87532d3d7c3e4094d0d4b729e98e1, type: 3}
+  Hairs_MascRound:
+  - {fileID: -1640050788660673325, guid: 3ba3d78ca3818be40a034d3d54c67756, type: 3}
+  - {fileID: 6316157496736321459, guid: 3ba3d78ca3818be40a034d3d54c67756, type: 3}
+  - {fileID: -1793354348292597408, guid: 3ba3d78ca3818be40a034d3d54c67756, type: 3}
+  - {fileID: -5963945449246318634, guid: 3ba3d78ca3818be40a034d3d54c67756, type: 3}
+  Hairs_FemmeRound:
+  - {fileID: -8570633650775035911, guid: abd0df1217b051c4fb4a3e8ab5670003, type: 3}
+  - {fileID: -7661431362506774356, guid: abd0df1217b051c4fb4a3e8ab5670003, type: 3}
+  - {fileID: -5962052669121800569, guid: abd0df1217b051c4fb4a3e8ab5670003, type: 3}
+  - {fileID: 2678171552760414215, guid: abd0df1217b051c4fb4a3e8ab5670003, type: 3}
+  Eyes:
+  - {fileID: 2707261361992854720, guid: 062e484ebb3e67640a9c7be2bd9c30f6, type: 3}
+  - {fileID: -1130797135602975256, guid: 062e484ebb3e67640a9c7be2bd9c30f6, type: 3}
+  - {fileID: 8658432270015526040, guid: 062e484ebb3e67640a9c7be2bd9c30f6, type: 3}
+  - {fileID: 8815181808923826722, guid: 062e484ebb3e67640a9c7be2bd9c30f6, type: 3}
+  - {fileID: 4621909134557189892, guid: 062e484ebb3e67640a9c7be2bd9c30f6, type: 3}
+  - {fileID: 8325357074868669084, guid: 062e484ebb3e67640a9c7be2bd9c30f6, type: 3}
+  Mouths:
+  - {fileID: 347911987322907853, guid: 4e76fb70303cd344bb6749a3e2f09ada, type: 3}
+  - {fileID: -9112254849645001145, guid: 4e76fb70303cd344bb6749a3e2f09ada, type: 3}
+  - {fileID: 3161090262912015504, guid: 4e76fb70303cd344bb6749a3e2f09ada, type: 3}
+  - {fileID: 8433765443872726535, guid: 4e76fb70303cd344bb6749a3e2f09ada, type: 3}
+  - {fileID: -4494388285950563965, guid: 4e76fb70303cd344bb6749a3e2f09ada, type: 3}
+  - {fileID: -9169831588113663986, guid: 4e76fb70303cd344bb6749a3e2f09ada, type: 3}
+--- !u!4 &196833015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196833013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 326.18222, y: 185.0955, z: 339.5556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &323991863
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to Party Planning!
+  m_text: So it's time for yearly reunion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -446,8 +531,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -506,10 +591,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 758228897}
-    characterCount: 26
+    characterCount: 31
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 4
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -864,8 +949,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -921,7 +1006,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 17.53814}
   m_textInfo:
     textComponent: {fileID: 1653533170}
     characterCount: 18
@@ -968,7 +1053,7 @@ GameObject:
   - component: {fileID: 1734086754}
   - component: {fileID: 1734086753}
   m_Layer: 5
-  m_Name: GoButton (TMP)
+  m_Name: GoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -991,8 +1076,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228, y: -147}
-  m_SizeDelta: {x: 250, y: 50}
+  m_AnchoredPosition: {x: 234.6, y: -186}
+  m_SizeDelta: {x: 250, y: 45.615448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734086753
 MonoBehaviour:
@@ -1067,7 +1152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 67c1672806f942a47baa9b94625d311e, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1285,7 +1370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000025431, y: -0.000025431}
   m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901172909
@@ -1307,21 +1392,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You need to plan a dinner party for a few members of your family! It''s
-    a little bit of a potluck, so don''t worry, the guests will be helping out.
-
-
-    But
-    wait! What about your cousin who''s vegetarian? We''re going to need to make
-    sure that we have some vegetarian food at the party!
-
-
-    There''s not much
-    time left, do what you can to make sure everyone has a good time. Don''t forget
-    to seat everyone appropriately too!
-
-
-    Good luck!'
+  m_text: "You\u2019ve drawn the short straw: nobody else was able to organize this
+    year\u2019s reunion. It didn\u2019t help that you lived closest to the location.
+    Granny is counting on you to make sure that everyone can make it, and that all
+    of the food and seating is planned accordingly. The problem? Your family members
+    don\u2019t RSVP to emails. So you have to get a little more personal.\r\n\r\nText
+    your family members, and organize the reunion by finding out what foods people
+    can bring, what seating preferences they have and if they have any food requirements.
+    Some relatives are vague, some are hyper specific. Just make sure that there
+    is 1 of every dish for the meal, and the seating plan that works for everyone.\r\n\r\nDo
+    this, and Granny will have you plan the reunion again next year \n- even if you
+    don\u2019t want to.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1330,8 +1411,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1366,7 +1447,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 764
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1387,15 +1468,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 35.136696, y: 73.92321, z: 41.374153, w: 14.212011}
+  m_margin: {x: 33.34332, y: 76.61326, z: 25.449059, w: 54.25246}
   m_textInfo:
     textComponent: {fileID: 1901172909}
-    characterCount: 423
+    characterCount: 794
     spriteCount: 0
-    spaceCount: 82
-    wordCount: 80
+    spaceCount: 146
+    wordCount: 143
     linkCount: 0
-    lineCount: 10
+    lineCount: 14
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
