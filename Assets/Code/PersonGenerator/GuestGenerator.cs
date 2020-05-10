@@ -114,17 +114,17 @@ namespace _2020Vision
             if (newHead.name.ToLower().Contains("bottom"))
             {
                 newHair = GetMascBottomHair();
-                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
+                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.Forties, NameGenerator.Gender.Masculine));
             }
             else if (newHead.name.ToLower().Contains("oval"))
             {
                 newHair = GetOvalMascHair();
-                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
+                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.Nineties, NameGenerator.Gender.Masculine));
             }
             else if (newHead.name.ToLower().Contains("rect"))
             {
                 newHair = GetRectMascHair();
-                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine));
+                newGuest.SetName(NameGenerator.GenerateName(NameGenerator.AgeRange.Sixties, NameGenerator.Gender.Masculine));
             }
             else if (newHead.name.ToLower().Contains("round"))
             {
