@@ -1402,7 +1402,7 @@ MonoBehaviour:
     Some relatives are vague, some are hyper specific. Just make sure that there
     is 1 of every dish for the meal, and the seating plan that works for everyone.\r\n\r\nDo
     this, and Granny will have you plan the reunion again next year \n- even if you
-    don\u2019t want to.\r\n"
+    don\u2019t want to.\r\nYou might want to make some notes\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 764
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1468,15 +1468,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 33.34332, y: 76.61326, z: 25.449059, w: 54.25246}
+  m_margin: {x: 33.34332, y: 76.61326, z: 25.449059, w: 24.225624}
   m_textInfo:
     textComponent: {fileID: 1901172909}
-    characterCount: 794
+    characterCount: 828
     spriteCount: 0
-    spaceCount: 146
-    wordCount: 143
+    spaceCount: 153
+    wordCount: 150
     linkCount: 0
-    lineCount: 14
+    lineCount: 15
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
