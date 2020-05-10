@@ -159,49 +159,15 @@ public class DinnerPartyGlobals : MonoBehaviour
         Persons.Add(person0);
         DontDestroyOnLoad(guest0);
 
-        GameObject guest1 = GuestGenerator.Singleton.CreateGuest();
-        Person person1 = new Person(1)
+        for (int i = 1; i < 6; ++i)
         {
-            name = guest1.GetComponent<Seating.Guest>().GetName()
-        };
-        Guests.Add(guest1);
-        Persons.Add(person1);
-        DontDestroyOnLoad(guest1);
-
-        GameObject guest2 = GuestGenerator.Singleton.CreateGuest();
-        Person person2 = new Person(2)
-        {
-            name = guest2.GetComponent<Seating.Guest>().GetName()
-        };
-        Guests.Add(guest2);
-        Persons.Add(person2);
-        DontDestroyOnLoad(guest2);
-
-        GameObject guest3 = GuestGenerator.Singleton.CreateGuest();
-        Person person3 = new Person(3)
-        {
-            name = guest3.GetComponent<Seating.Guest>().GetName()
-        };
-        Guests.Add(guest3);
-        Persons.Add(person3);
-        DontDestroyOnLoad(guest3);
-
-        GameObject guest4 = GuestGenerator.Singleton.CreateGuest();
-        Person person4 = new Person(4)
-        {
-            name = guest4.GetComponent<Seating.Guest>().GetName()
-        };
-        Guests.Add(guest4);
-        Persons.Add(person4);
-        DontDestroyOnLoad(guest4);
-
-        GameObject guest5 = GuestGenerator.Singleton.CreateGuest();
-        Person person5 = new Person(5)
-        {
-            name = guest5.GetComponent<Seating.Guest>().GetName()
-        };
-        Guests.Add(guest5);
-        Persons.Add(person5);
-        DontDestroyOnLoad(guest5);
+            GameObject guest = GuestGenerator.Singleton.CreateGuest();
+            Person person = new Person(i)
+            {
+                name = guest.GetComponent<Seating.Guest>().GetName()
+            };
+            Guests.Add(guest);
+            Persons.Add(person);
+        }
     }
 }
