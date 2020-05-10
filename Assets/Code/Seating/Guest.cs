@@ -10,6 +10,7 @@ namespace Seating
     {
         public bool inDrag = false, overSeat = false;
         public Image Head;
+        public Image Hair;
         public Image Eyes;
         public Image Mouth;
         public int relative, seatIndex = -1;
@@ -31,6 +32,11 @@ namespace Seating
         {
             relative = relativeIndex;
             Head.sprite = head;
+        }
+
+        public void SetHair(Sprite hair)
+        {
+            Hair.sprite = hair;
         }
 
         public void SetEyes(Sprite eyes)
