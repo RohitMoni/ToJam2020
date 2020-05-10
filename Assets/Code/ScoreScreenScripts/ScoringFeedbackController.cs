@@ -21,7 +21,7 @@ public class ScoringFeedbackController : MonoBehaviour
     {
         var dinnerPartyGlobals = GameObject.Find("Globals").GetComponent<DinnerPartyGlobals>();
         var feedback = ScoringManager.GetFeedbackStrings(dinnerPartyGlobals.currentPartyState, dinnerPartyGlobals.requirements);
-        ReplaceNamesInFeedbackStrings(feedback, dinnerPartyGlobals.guests);
+        ReplaceNamesInFeedbackStrings(feedback, dinnerPartyGlobals.Persons);
         AddFeedbackToQueue(feedback);
     }
 

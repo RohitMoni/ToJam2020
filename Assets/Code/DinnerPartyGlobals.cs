@@ -7,7 +7,9 @@ public class DinnerPartyGlobals : MonoBehaviour
     [HideInInspector]
     public PartyState currentPartyState;
 
-    public List<Person> guests = new List<Person>();
+    public List<Person> Persons = new List<Person>();
+    public List<GameObject> Guests = new List<GameObject>();
+    public Sprite GrannySprite;
 
     // Hard coded desired state for one scenario. This will need to be removed if we do multiple scenarios / generated scenarios
     public List<IRequirement> requirements = new List<IRequirement>()
@@ -139,5 +141,67 @@ public class DinnerPartyGlobals : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);    
+    }
+
+    private void Start()
+    {
+        GameObject guest0 = GuestGenerator.Singleton.CreateGuest();
+        Seating.Guest granny = guest0.GetComponent<Seating.Guest>();
+        granny.Head.sprite = GrannySprite;
+        granny.Eyes.sprite = null;
+        granny.Hair.sprite = null;
+        granny.Mouth.sprite = null;
+        Person person0 = new Person(0)
+        {
+            name = "Granny"
+        };
+        Guests.Add(guest0);
+        Persons.Add(person0);
+        DontDestroyOnLoad(guest0);
+
+        GameObject guest1 = GuestGenerator.Singleton.CreateGuest();
+        Person person1 = new Person(1)
+        {
+            name = guest1.GetComponent<Seating.Guest>().GetName()
+        };
+        Guests.Add(guest1);
+        Persons.Add(person1);
+        DontDestroyOnLoad(guest1);
+
+        GameObject guest2 = GuestGenerator.Singleton.CreateGuest();
+        Person person2 = new Person(2)
+        {
+            name = guest2.GetComponent<Seating.Guest>().GetName()
+        };
+        Guests.Add(guest2);
+        Persons.Add(person2);
+        DontDestroyOnLoad(guest2);
+
+        GameObject guest3 = GuestGenerator.Singleton.CreateGuest();
+        Person person3 = new Person(3)
+        {
+            name = guest3.GetComponent<Seating.Guest>().GetName()
+        };
+        Guests.Add(guest3);
+        Persons.Add(person3);
+        DontDestroyOnLoad(guest3);
+
+        GameObject guest4 = GuestGenerator.Singleton.CreateGuest();
+        Person person4 = new Person(4)
+        {
+            name = guest4.GetComponent<Seating.Guest>().GetName()
+        };
+        Guests.Add(guest4);
+        Persons.Add(person4);
+        DontDestroyOnLoad(guest4);
+
+        GameObject guest5 = GuestGenerator.Singleton.CreateGuest();
+        Person person5 = new Person(5)
+        {
+            name = guest5.GetComponent<Seating.Guest>().GetName()
+        };
+        Guests.Add(guest5);
+        Persons.Add(person5);
+        DontDestroyOnLoad(guest5);
     }
 }

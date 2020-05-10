@@ -57,6 +57,11 @@ namespace Seating
             GuestName = name;
         }
 
+        public string GetName()
+        {
+            return GuestName;
+        }
+
         public void StartDrag()
         {
             inDrag = true;

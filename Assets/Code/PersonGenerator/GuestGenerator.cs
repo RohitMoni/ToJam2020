@@ -93,12 +93,17 @@ namespace _2020Vision
 
         public GameObject CreateGuest()
         {
-            GameObject newGuestPrefab = Instantiate(GuestPrefab);
+            GameObject newGuestObject = Instantiate(GuestPrefab);
 
-            Guest newGuest = newGuestPrefab.GetComponent<Guest>();
-
+            Guest newGuest = newGuestObject.GetComponent<Guest>();
+            
             //Head shape
             Sprite newHead = GetRandomHead();
+            if (newHead == null)
+            {
+                int i = 0;
+                i++;
+            }
             int headIndex = Heads.IndexOf(newHead);
             newGuest.SetPortrait(newHead, headIndex);
 
@@ -129,7 +134,7 @@ namespace _2020Vision
             //Eye shape
             newGuest.SetEyes(GetRandomEyes());
 
-            return newGuestPrefab;
+            return newGuestObject;
         }
     }
 }
