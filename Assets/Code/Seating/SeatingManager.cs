@@ -24,7 +24,7 @@ namespace Seating
                 return;
             }
 
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         public void PlaceGuest(Seat seat)

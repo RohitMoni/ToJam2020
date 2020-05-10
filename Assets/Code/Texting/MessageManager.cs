@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MessageManager : MonoBehaviour
 {
+    public static MessageManager instance;
     public GameObject messageRightPrefab, messageLeftPrefab;
     public Transform left, right;
     private bool leftRight = true;
@@ -13,6 +14,18 @@ public class MessageManager : MonoBehaviour
                             "Oh dear is this the right number? I certainly hope this is [you]! I'm bringing my famous 3 bean dip that I know everyone loves! [Relative 4]",
                             "Do you need someone to bring streamers? I have 3 boxes of unused streamers of many colours that I would LOVE to bring ;D",
                             "Dearest beloved, I adore your passion and commitment to this endeavor.  It is a rare sight to behold such dedication for no recognition.  As such, I shall do my best to assist in easing your worries, for I will be gifting this banquet a glorious turkey that none have ever seen, one so luscious and plump that their mouths will water!"};
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            return;
+        }
+
+        Destroy(gameObject);
+    }
+
     public void AddMessage()
     {
         string messageString = messages[Random.Range(0, messages.Length)];
@@ -35,5 +48,10 @@ public class MessageManager : MonoBehaviour
             leftMessage.GetComponent<CanvasGroup>().alpha = 0;
         }
         leftRight = !leftRight;
+    }
+
+    public void ChooseMessage(int index)
+    {
+        Debug.Log("Chose Message " + index);
     }
 }
