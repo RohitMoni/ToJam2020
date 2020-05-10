@@ -10,14 +10,13 @@ namespace Seating
     public class GuestListItem : MonoBehaviour, IPointerClickHandler
     {
         public int relative;
-        private Image portrait;
+        private GameObject portrait;
 
         //Temp
         private void Start()
         {
             relative = transform.GetSiblingIndex();
-            portrait = transform.GetChild(0).GetComponent<Image>();
-            portrait.sprite = FindObjectOfType<SeatingManager>().guestHeads[relative];
+            portrait = transform.Find("Portrait").gameObject;
         }
 
         //The ListItem is hidden and shown based on changes to preferred height so that it is still in the same position in the list
@@ -33,13 +32,13 @@ namespace Seating
         public void Show()
         {
             GetComponent<LayoutElement>().preferredHeight = 100;
-            portrait.enabled = true;
+            portrait.SetActive(true); // This might not work if we need other parts of the gameobject to be active
         }
 
         public void Hide()
         {
             GetComponent<LayoutElement>().preferredHeight = 0;
-            portrait.enabled = false;
+            portrait.SetActive(false);
         }
     }
 }

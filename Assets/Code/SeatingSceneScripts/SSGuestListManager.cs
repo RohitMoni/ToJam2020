@@ -6,8 +6,13 @@ public class SSGuestListManager : MonoBehaviour
     public GameObject[] guestList;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        if (GameObject.Find("Globals") == null)
+        {
+            return;
+        }
+
         // Setup Guest list with global generated
         var dinnerPartyGlobals = GameObject.Find("Globals").GetComponent<DinnerPartyGlobals>();
 
@@ -25,6 +30,8 @@ public class SSGuestListManager : MonoBehaviour
 
             // Move the guest to be a sibling of the old guest item
             dinnerPartyGlobals.Guests[i].transform.SetParent(guestList[i].transform);
+
+            dinnerPartyGlobals.Guests[i].name = "Portrait";
 
             // Delete the old portrait object
             Destroy(portraitObject);

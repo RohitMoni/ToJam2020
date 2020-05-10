@@ -12,8 +12,6 @@ namespace Seating
         public GameObject inventory;
         public GameObject guestPrefab;
 
-        public Sprite[] guestHeads;
-
         public bool IsDragging { get => dragGuest; }
 
         private void Awake()
@@ -82,10 +80,11 @@ namespace Seating
                 ReleaseGuest();
             }
 
-            //Spawn Guest from ListItem to mousePosition
-            dragGuest = Instantiate(guestPrefab, transform).GetComponent<Guest>();
+            // Spawn Guest from ListItem to mousePosition
+            // Make sure we spawn the correct guest
+            var guest = item.gameObject;
+            dragGuest = Instantiate(item.gameObject, transform).transform.Find("Portrait").GetComponent<Guest>();
             dragGuest.StartDrag();
-            dragGuest.SetPortrait(item.relative);
             dragGuest.transform.position = Input.mousePosition;
         }
 

@@ -25,12 +25,6 @@ namespace Seating
             Hair = transform.GetChild(3).GetComponent<Image>();
         }
 
-        public void SetPortrait(int relativeIndex)
-        {
-            relative = relativeIndex;
-            Head.sprite = FindObjectOfType<SeatingManager>().guestHeads[relative];
-        }
-
         public void SetPortrait(Sprite head, int relativeIndex)
         {
             relative = relativeIndex;
