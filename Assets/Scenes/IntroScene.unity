@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1299804a961cb4590423c3ab384525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GuestPrefab: {fileID: 6644111706264189022, guid: 15badb56db227ac44aa70c88b26f7ae9,
+    type: 3}
   Heads:
   - {fileID: 21300000, guid: 5751a9a9386c5674c9c97cd14a15d5ce, type: 3}
   - {fileID: 21300000, guid: 858e2721f2d98524a9d0d3f913a8f00a, type: 3}
