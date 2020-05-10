@@ -10,6 +10,7 @@ namespace Seating
     {
         public bool inDrag = false, overSeat = false;
         public Image Head;
+        public Image Hair;
         public Image Eyes;
         public Image Mouth;
         public int relative, seatIndex = -1;
@@ -19,6 +20,9 @@ namespace Seating
         void Awake()
         {
             Head = transform.GetChild(0).GetComponent<Image>();
+            Eyes = transform.GetChild(1).GetComponent<Image>();
+            Mouth = transform.GetChild(2).GetComponent<Image>();
+            Hair = transform.GetChild(3).GetComponent<Image>();
         }
 
         public void SetPortrait(int relativeIndex)
@@ -31,6 +35,11 @@ namespace Seating
         {
             relative = relativeIndex;
             Head.sprite = head;
+        }
+
+        public void SetHair(Sprite hair)
+        {
+            Hair.sprite = hair;
         }
 
         public void SetEyes(Sprite eyes)

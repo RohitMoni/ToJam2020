@@ -14,11 +14,13 @@ namespace _2020Vision
     {
         private static GuestGenerator singleton = null;
 
+        public GameObject GuestPrefab;
+
         public List<Sprite> Heads;
-        public List<Sprite> Hair_MascBottom;
-        public List<Sprite> Hair_MascOval;
-        public List<Sprite> Hair_MascRound;
-        public List<Sprite> Hair_FemmeRound;
+        public List<Sprite> Hairs_MascBottom;
+        public List<Sprite> Hairs_MascOval;
+        public List<Sprite> Hairs_MascRound;
+        public List<Sprite> Hairs_FemmeRound;
         public List<Sprite> Eyes;
         public List<Sprite> Mouths;
 
@@ -59,6 +61,26 @@ namespace _2020Vision
             return Heads[Random.Range(0, Heads.Count - 1)];
         }
 
+        private Sprite GetMascBottomHair()
+        {
+            return Hairs_MascBottom[Random.Range(0, Hairs_MascBottom.Count - 1)];
+        }
+
+        private Sprite GetOvalMascHair()
+        {
+            return Hairs_MascOval[Random.Range(0, Hairs_MascOval.Count - 1)];
+        }
+
+        private Sprite GetRoundMascHair()
+        {
+            return Hairs_MascRound[Random.Range(0, Hairs_MascRound.Count - 1)];
+        }
+
+        private Sprite GetRoundFemmeHair()
+        {
+            return Hairs_FemmeRound[Random.Range(0, Hairs_FemmeRound.Count - 1)];
+        }
+
         private Sprite GetRandomEyes()
         {
             return Eyes[Random.Range(0, Eyes.Count - 1)];
@@ -69,18 +91,45 @@ namespace _2020Vision
             return Mouths[Random.Range(0, Mouths.Count - 1)];
         }
 
-        public Guest CreatePerson()
+        public GameObject CreateGuest()
         {
-            Guest newGuest = new Guest();
+            GameObject newGuestPrefab = Instantiate(GuestPrefab);
 
+            Guest newGuest = newGuestPrefab.GetComponent<Guest>();
+
+            //Head shape
             Sprite newHead = GetRandomHead();
             int headIndex = Heads.IndexOf(newHead);
             newGuest.SetPortrait(newHead, headIndex);
 
+            //Hair
+            if (newHead.name.ToLower().Contains("bottom"))
+            {
+                Sprite newHair = GetMascBottomHair();
+            }
+            else if (newHead.name.ToLower().Contains("oval"))
+            {
+                Sprite newHair = GetOvalMascHair();
+            }
+            else if (newHead.name.ToLower().Contains("round"))
+            {
+                if (Random.value > 0.5)
+                {
+                    Sprite newHair = GetRoundFemmeHair();
+                }
+                else
+                {
+                    Sprite newHair = GetRoundMascHair();
+                }
+            }
+
+            //Mouth shape
             newGuest.SetMouth(GetRandomMouths());
+
+            //Eye shape
             newGuest.SetEyes(GetRandomEyes());
 
-            return newGuest;
+            return newGuestPrefab;
         }
     }
 }
