@@ -149,19 +149,22 @@ public class DinnerPartyGlobals : MonoBehaviour
         Seating.Guest granny = guest0.GetComponent<Seating.Guest>();
         granny.SetName("Granny");
         granny.Head.sprite = GrannySprite;
-        granny.Eyes.sprite = null;
-        granny.Eyes.color = Color.clear;
-        granny.Hair.sprite = null;
-        granny.Hair.color = Color.clear;
-        granny.Mouth.sprite = null;
-        granny.Mouth.color = Color.clear;
+        Destroy(granny.Eyes.gameObject);
+        Destroy(granny.Hair.gameObject);
+        Destroy(granny.Mouth.gameObject);
+        //granny.Eyes.sprite = null;
+        //granny.Eyes.color = Color.clear;
+        //granny.Hair.sprite = null;
+        //granny.Hair.color = Color.clear;
+        //granny.Mouth.sprite = null;
+        //granny.Mouth.color = Color.clear;
+        granny.relative = 0;
         Person person0 = new Person(0)
         {
             name = guest0.GetComponent<Seating.Guest>().GetName()
         };
         Guests.Add(guest0);
         Persons.Add(person0);
-        DontDestroyOnLoad(guest0);
 
         for (int i = 1; i < 6; ++i)
         {
@@ -170,9 +173,9 @@ public class DinnerPartyGlobals : MonoBehaviour
             {
                 name = guest.GetComponent<Seating.Guest>().GetName()
             };
+            guest.GetComponent<Seating.Guest>().relative = i;
             Guests.Add(guest);
             Persons.Add(person);
-            DontDestroyOnLoad(guest);
         }
     }
 }

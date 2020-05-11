@@ -25,6 +25,23 @@ namespace Seating
             Hair = transform.GetChild(3).GetComponent<Image>();
         }
 
+        public void Setup(Guest guest)
+        {
+            relative = guest.relative;
+            GuestName = guest.GuestName;
+            Head.sprite = guest.Head.sprite;
+            if (relative == 0)
+            {
+                Destroy(Eyes.gameObject);
+                Destroy(Hair.gameObject);
+                Destroy(Mouth.gameObject);
+                return;
+            }
+            Hair.sprite = guest.Hair.sprite;
+            Eyes.sprite = guest.Eyes.sprite;
+            Mouth.sprite = guest.Mouth.sprite;
+        }
+
         public void SetPortrait(int relativeIndex)
         {
             relative = relativeIndex;

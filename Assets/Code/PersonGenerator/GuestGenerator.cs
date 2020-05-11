@@ -100,7 +100,7 @@ namespace _2020Vision
 
         public GameObject CreateGuest()
         {
-            GameObject newGuestObject = Instantiate(GuestPrefab);
+            GameObject newGuestObject = Instantiate(GuestPrefab, transform);
 
             Guest newGuest = newGuestObject.GetComponent<Guest>();
             

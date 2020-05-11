@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 9153295755770016989}
   - component: {fileID: 9136518839578477497}
   - component: {fileID: 5344569655050794244}
+  - component: {fileID: 3042457677545060982}
   m_Layer: 5
   m_Name: GuestListItem
   m_TagString: Untagged
@@ -341,3 +342,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relative: 0
+--- !u!225 &3042457677545060982
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6644111706264189022}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

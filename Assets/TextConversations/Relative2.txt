@@ -1,22 +1,24 @@
 ﻿Text History:
-Granny: Hello deary I hope all is going well. Thank you so much for organizing this reunion! Hope everyone can come! Get in touch with me if you need help with some of your relatives.  Your Loving Granny.
-You: No problem Granny, made sense for me to organize it this year. Is there anything I should know?
-Granny: Hello dear No I think You will be fine! Hopefully everyone can come! Your Granny
+You: Hey you said in your RSVP that you wanted to talk?
+Relative: Yes! Thank you for contacting me! You are doing seating as well? Can you make sure that I get to sit beside Granny? I have LOTS to talk about!
+You: Okay, I think I can do that, is that all?
+Relative: No! I'm hoping to bring my 3 bean dip that I know Granny ADORES! 
+You: Isn’t that her bean dip?
 
 Food:
-You: Hey granny forgot to ask, you weren't planning on bringing anything were you?
-Granny: Hello sweetie I can bring anything you need me to deary. Granny
-You: No its fine, just wanted to make sure.  I'll make sure everything gets there.
+You: Just checking in, you fine with any veggie dish?
+Relative: Not just ANY veggie dish will do! It better not be made by that [Relative 4] chump or it will sully the dip!
+You: I’m not even sure they’re showing up…
+Relative: HOW DARE THEY! This is GRANNY’S REUNION. I will give him a piece of MY MIND.
 
 Seating:
-You: Granny, are you excited for the reunion?
-Granny: Hello pumpkin Yes! I am very excited for the reunion! Cannot wait to see everyone there! Granny.
-You: There aren't any traditions I should worry about, are there? Like you need to sit at the head of the table?
-Granny: Hello deary No, anyone can sit at the head of the table! I know your Grandpa would insist on it, but he can't anymore. Your Granny.
+You: Seating arrangements, you mentioned something?
+Relative: As I said: Can you make sure that I get to sit beside Granny? 
 
-Bringing:
-You: Hey Granny I'm at my breaking point. How do we organize this every year without somebody going insane?
-Granny: Hello honey I'm not sure what you mean! The reunion has always gone well. Granny
-You: There are picky eaters, picky seaters and picky bleaters. This cannot have always 'gone well'
-Granny: Hi sweetie Well like your Grandfather always said 'Patience is a virtue; sometimes you need to teach it to others the hard way.' Your everloving Granny.
-You: ... Ok Granny.
+Bringing: 
+You: Hey, could you give me a bit more about your bean dip?
+Relative: It's a secret recipe handed down by generations by our great great grandmother! I won't just give it up that easily!
+You: I mean is that all your bringing? An appetizer?
+Relative: It's not just an appetizer! It's a tradition! How dare you!
+You: You know I don't mean that. Did you want anything WITH it?
+Relative: Oh! I was hoping for a veggie dish to go with it if you don't mind!

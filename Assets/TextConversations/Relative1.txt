@@ -1,22 +1,21 @@
 ﻿Text History:
-Granny: Hello deary I hope all is going well. Thank you so much for organizing this reunion! Hope everyone can come! Get in touch with me if you need help with some of your relatives.  Your Loving Granny.
-You: No problem Granny, made sense for me to organize it this year. Is there anything I should know?
-Granny: Hello dear No I think You will be fine! Hopefully everyone can come! Your Granny
+You: Hey, you haven't responded to the email, you coming to the reunion?
+Relative: Oh shoot did I not RSVP? Yes sorry I'm coming, been tied up in meetings all week. I'm going to be running late, I’ll bring something easy to make, so don't worry about me for the main.
+You: Ok that's fine. Anything else?
+Relative: Yeah, if Relative 4 is going, make sure I'm nowhere near the jerk, ok? I just want to enjoy some downtime with Granny.  Some peace and quiet, yknow.
 
 Food:
-You: Hey granny forgot to ask, you weren't planning on bringing anything were you?
-Granny: Hello sweetie I can bring anything you need me to deary. Granny
-You: No its fine, just wanted to make sure.  I'll make sure everything gets there.
+You: Should I be worried about any food that might be brought?
+Relative: None that you can control. I’m on a diet currently, but I’ll watch it myself. No need to concern yourself.
 
 Seating:
-You: Granny, are you excited for the reunion?
-Granny: Hello pumpkin Yes! I am very excited for the reunion! Cannot wait to see everyone there! Granny.
-You: There aren't any traditions I should worry about, are there? Like you need to sit at the head of the table?
-Granny: Hello deary No, anyone can sit at the head of the table! I know your Grandpa would insist on it, but he can't anymore. Your Granny.
+You: Hey, anything else I should be worried about? 
+Relative: Putting me with Relative 4. Can't talk. Meeting.
 
 Bringing:
-You: Hey Granny I'm at my breaking point. How do we organize this every year without somebody going insane?
-Granny: Hello honey I'm not sure what you mean! The reunion has always gone well. Granny
-You: There are picky eaters, picky seaters and picky bleaters. This cannot have always 'gone well'
-Granny: Hi sweetie Well like your Grandfather always said 'Patience is a virtue; sometimes you need to teach it to others the hard way.' Your everloving Granny.
-You: ... Ok Granny.
+You: Hey! Can I get an update.
+Relative:  Might be late , got a conference call just before that I can't miss.
+You: Not a problem.  Are you planning on bringing anything?
+Relative: Food. Anything you need. Just give me 3-5 business days to prepare.
+You: Can you bring a dessert?
+Relative: Affirmative.

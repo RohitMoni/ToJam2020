@@ -1,22 +1,28 @@
 ﻿Text History:
-Granny: Hello deary I hope all is going well. Thank you so much for organizing this reunion! Hope everyone can come! Get in touch with me if you need help with some of your relatives.  Your Loving Granny.
-You: No problem Granny, made sense for me to organize it this year. Is there anything I should know?
-Granny: Hello dear No I think You will be fine! Hopefully everyone can come! Your Granny
+You: Hi I hope I’ve got the right number, is this [Relative #6]?
+Relative: OMG Hi! It’s been a while hasn’t it? How’d you get my number? :D
+You:  Granny had it on her kitchen cue cards.  I’m hosting the reunion this year and figured I would message and ask if you were coming.  
+Relative: Sure! Haven’t seen Granny in ages, think it’ll be a great time.  If I recall, I should bring something right?
+You: Yes! Anything you could bring would be helpful.
+Relative: Well, I can’t risk bringing anything [allergy] related… so how about turkey? :D
+You: Sound perfect to me! Thank you so much
 
 Food:
-You: Hey granny forgot to ask, you weren't planning on bringing anything were you?
-Granny: Hello sweetie I can bring anything you need me to deary. Granny
-You: No its fine, just wanted to make sure.  I'll make sure everything gets there.
+You: So is there anything food related that you want to confirm?
+Relative: Not really, I’ve gotten to experience so many things while abroad. 
 
 Seating:
-You: Granny, are you excited for the reunion?
-Granny: Hello pumpkin Yes! I am very excited for the reunion! Cannot wait to see everyone there! Granny.
-You: There aren't any traditions I should worry about, are there? Like you need to sit at the head of the table?
-Granny: Hello deary No, anyone can sit at the head of the table! I know your Grandpa would insist on it, but he can't anymore. Your Granny.
+Relative: Just wanted to ask, is [Relative 3] going to be there? :x
+You: Uh let me check, but I think so?
+Relative: Damn, was hoping that wasn’t the case. Oh well. 
+You: Want me to make sure they aren’t beside you?
+Relative: If it isn’t too much trouble <3
 
 Bringing:
-You: Hey Granny I'm at my breaking point. How do we organize this every year without somebody going insane?
-Granny: Hello honey I'm not sure what you mean! The reunion has always gone well. Granny
-You: There are picky eaters, picky seaters and picky bleaters. This cannot have always 'gone well'
-Granny: Hi sweetie Well like your Grandfather always said 'Patience is a virtue; sometimes you need to teach it to others the hard way.' Your everloving Granny.
-You: ... Ok Granny.
+You: So have your travels been fun then?
+Relative: Yes! 8D I had an absolute blast.  If I had more time, I’d probably bring some more interesting food.  Still moving things back in though.
+You: No worries, pretty sure somebody would complain if you brought something that they couldn’t pronounce.
+Relative: Why do you think I call it special turkey >_> 
+You: Yes, you did say you were bringing turkey.
+You: Wait, what makes it special?
+Relative: It’ll be fine.  ;) I’ll just talk with everyone else and it’ll probably be fine.

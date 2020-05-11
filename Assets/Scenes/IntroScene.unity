@@ -458,8 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 362221256}
   transitionTime: 1
-  Scene:
-    m_Handle: 2
+  sceneName: PartyPlanning
 --- !u!4 &677990783
 Transform:
   m_ObjectHideFlags: 0

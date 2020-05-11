@@ -1,22 +1,32 @@
 ﻿Text History:
-Granny: Hello deary I hope all is going well. Thank you so much for organizing this reunion! Hope everyone can come! Get in touch with me if you need help with some of your relatives.  Your Loving Granny.
-You: No problem Granny, made sense for me to organize it this year. Is there anything I should know?
-Granny: Hello dear No I think You will be fine! Hopefully everyone can come! Your Granny
+You: HELLO
+Relative: Stop texting me.
 
 Food:
-You: Hey granny forgot to ask, you weren't planning on bringing anything were you?
-Granny: Hello sweetie I can bring anything you need me to deary. Granny
-You: No its fine, just wanted to make sure.  I'll make sure everything gets there.
+You: You haven’t RSVP’ed for the reunion.  You coming?
+Relative: You organizing?
+You: Uh yes, that’s what the email says.  The one you haven’t RSVP’ed to.
+Relative: Gonna have food?
+You: Yes, especially if everyone brings food.  
+Relative: What about snacks
+You: What does that have to do with anything? 
+Relative: You confirm that there are apps or snacks, and I bring the drinks.
+You: That does not help me at all.
 
 Seating:
-You: Granny, are you excited for the reunion?
-Granny: Hello pumpkin Yes! I am very excited for the reunion! Cannot wait to see everyone there! Granny.
-You: There aren't any traditions I should worry about, are there? Like you need to sit at the head of the table?
-Granny: Hello deary No, anyone can sit at the head of the table! I know your Grandpa would insist on it, but he can't anymore. Your Granny.
+You: Ok just to confirm, you don’t care about anything but snacks.
+Relative: yup
+You: Really? Nothing at all.
+Relative: yup
 
 Bringing:
-You: Hey Granny I'm at my breaking point. How do we organize this every year without somebody going insane?
-Granny: Hello honey I'm not sure what you mean! The reunion has always gone well. Granny
-You: There are picky eaters, picky seaters and picky bleaters. This cannot have always 'gone well'
-Granny: Hi sweetie Well like your Grandfather always said 'Patience is a virtue; sometimes you need to teach it to others the hard way.' Your everloving Granny.
-You: ... Ok Granny.
+Relative: [Relative 3] keeps talking about bean dip. That the app for the reunion?
+You: So far, yes.  
+Relative: Don’t trust it.
+You: Because… why?
+Relative: Because it isn’t a proper app.
+You: It is when people bring veggies and chips.  Which I can handle myself. What I can’t handle is not getting an RSVP
+Relative: Will bring drinks.
+You: Again, drinks aren’t food. Also what kind of drinks
+Relative: Drinks ;)
+You: …

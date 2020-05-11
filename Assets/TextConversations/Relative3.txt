@@ -1,22 +1,26 @@
 ﻿Text History:
-Granny: Hello deary I hope all is going well. Thank you so much for organizing this reunion! Hope everyone can come! Get in touch with me if you need help with some of your relatives.  Your Loving Granny.
-You: No problem Granny, made sense for me to organize it this year. Is there anything I should know?
-Granny: Hello dear No I think You will be fine! Hopefully everyone can come! Your Granny
+You: Hey you coming to the reunion?
+Relative: Wrong number buddy, ain’t nobody here going to a reunion.
+You: Alrighty then, I’ll just tell Granny and [Relative 5] that you can’t go
+Relative: AIGHT HOLD UP. 
 
 Food:
-You: Hey granny forgot to ask, you weren't planning on bringing anything were you?
-Granny: Hello sweetie I can bring anything you need me to deary. Granny
-You: No its fine, just wanted to make sure.  I'll make sure everything gets there.
+You: So what’s this about you coming this year now?
+Relative: Look, I was told that there wouldn’t be a lot of meat this year, so I figured there wouldn’t be a point in showing up, alright?
+You: Whoever told you that lied. There’s always meat. Especially if you bring it yourself.
+Relative: Won’t happen. Stove broke. I’ll see if I can find something easier.
+You: Didn’t know you owned a stove. Just bring a salad or something.
 
 Seating:
-You: Granny, are you excited for the reunion?
-Granny: Hello pumpkin Yes! I am very excited for the reunion! Cannot wait to see everyone there! Granny.
-You: There aren't any traditions I should worry about, are there? Like you need to sit at the head of the table?
-Granny: Hello deary No, anyone can sit at the head of the table! I know your Grandpa would insist on it, but he can't anymore. Your Granny.
+Relative: Hey what’s this about [Relative 5] not coming this year? Thought you said [Relative 5] was!
+You: I didn’t say anything, just said [Relative 5] would be disappointed.  Still waiting on an rsvp
+Relative: Well, if they show up, make sure I’m beside em alright? Got a lot of catching up to do
+You: Sure, but only if you tell me what you’re bringing
+Relative: Uh ok
 
 Bringing:
-You: Hey Granny I'm at my breaking point. How do we organize this every year without somebody going insane?
-Granny: Hello honey I'm not sure what you mean! The reunion has always gone well. Granny
-You: There are picky eaters, picky seaters and picky bleaters. This cannot have always 'gone well'
-Granny: Hi sweetie Well like your Grandfather always said 'Patience is a virtue; sometimes you need to teach it to others the hard way.' Your everloving Granny.
-You: ... Ok Granny.
+Relative: Does trail mix count as an appetizer or a main dish?
+You: Neither. Didn’t I tell you to bring a salad? What’s with trail mix?
+Relative: I have a bunch of it! Figured I wouldn’t let it go to waste. Now what am I gonna do with it?
+You: That’s not my problem.  What is my problem is you not confirming that you’ll bring something.
+Relative: I’ll get back to you on that.
