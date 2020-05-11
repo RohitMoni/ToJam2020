@@ -2,7 +2,7 @@
 You: Hey, you haven't responded to the email, you coming to the reunion?
 Relative: Oh shoot did I not RSVP? Yes sorry I'm coming, been tied up in meetings all week. I'm going to be running late, I’ll bring something easy to make, so don't worry about me for the main.
 You: Ok that's fine. Anything else?
-Relative: Yeah, if Relative 4 is going, make sure I'm nowhere near the jerk, ok? I just want to enjoy some downtime with Granny.  Some peace and quiet, yknow.
+Relative: Yeah, if [Relative 4] is going, make sure I'm nowhere near the jerk, ok? I just want to enjoy some downtime with Granny.  Some peace and quiet, yknow.
 
 Food:
 You: Should I be worried about any food that might be brought?
@@ -10,7 +10,7 @@ Relative: None that you can control. I’m on a diet currently, but I’ll watch
 
 Seating:
 You: Hey, anything else I should be worried about? 
-Relative: Putting me with Relative 4. Can't talk. Meeting.
+Relative: Putting me with [Relative 4]. Can't talk. Meeting.
 
 Bringing:
 You: Hey! Can I get an update.

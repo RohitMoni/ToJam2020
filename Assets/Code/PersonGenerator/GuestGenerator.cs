@@ -16,14 +16,14 @@ namespace _2020Vision
 
         public GameObject GuestPrefab;
 
-        public List<Sprite> Heads;
-        public List<Sprite> Hairs_MascBottom;
-        public List<Sprite> Hairs_MascOval;
-        public List<Sprite> Hairs_MascRect;
-        public List<Sprite> Hairs_MascRound;
-        public List<Sprite> Hairs_FemmeRound;
-        public List<Sprite> Eyes;
-        public List<Sprite> Mouths;
+        public  List<Sprite> Heads;
+        public  List<Sprite> Hairs_MascBottom;
+        public  List<Sprite> Hairs_MascOval;
+        public  List<Sprite> Hairs_MascRect;
+        public  List<Sprite> Hairs_MascRound;
+        public  List<Sprite> Hairs_FemmeRound;
+        public  List<Sprite> Eyes;
+        public  List<Sprite> Mouths;
 
         public static GuestGenerator Singleton
         {
@@ -148,6 +148,54 @@ namespace _2020Vision
             newGuest.SetEyes(GetRandomEyes());
 
             return newGuestObject;
+        }
+
+        public GuestData CreateGuestData()
+        {
+            GuestData newGuest = new GuestData();
+
+            //Head shape
+            newGuest.Head = GetRandomHead();
+            string headName = newGuest.Head.name.ToLower();
+
+
+            //Hair
+            if (headName.Contains("bottom"))
+            {
+                newGuest.Hair = GetMascBottomHair();
+                newGuest.name = NameGenerator.GenerateName(NameGenerator.AgeRange.Forties, NameGenerator.Gender.Masculine);
+            }
+            else if (headName.Contains("oval"))
+            {
+                newGuest.Hair = GetOvalMascHair();
+                newGuest.name = NameGenerator.GenerateName(NameGenerator.AgeRange.Nineties, NameGenerator.Gender.Masculine);
+            }
+            else if (headName.Contains("rect"))
+            {
+                newGuest.Hair = GetRectMascHair();
+                newGuest.name = NameGenerator.GenerateName(NameGenerator.AgeRange.Sixties, NameGenerator.Gender.Masculine);
+            }
+            else if (headName.Contains("round"))
+            {
+                if (Random.value > 0.5)
+                {
+                    newGuest.Hair = GetRoundFemmeHair();
+                    newGuest.name = NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Feminine);
+                }
+                else
+                {
+                    newGuest.Hair = GetRoundMascHair();
+                    newGuest.name = NameGenerator.GenerateName(NameGenerator.AgeRange.DontCare, NameGenerator.Gender.Masculine);
+                }
+            }
+
+            //Eye shape
+            newGuest.Eyes = GetRandomEyes();
+
+            //Mouth shape
+            newGuest.Mouth = GetRandomMouths();
+
+            return newGuest;
         }
     }
 }

@@ -2073,6 +2073,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4388298208145856867, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4604141711344488019, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2116,10 +2121,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 021ad1ff65b1b364bb179a01eea066eb,
         type: 3}
+    - target: {fileID: 6332195999530436705, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644111706264189022, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_Name
       value: Granny
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514042035019605337, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c2db58c39a00064d880046b6467a6d8, type: 3}

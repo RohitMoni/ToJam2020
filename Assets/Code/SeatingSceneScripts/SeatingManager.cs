@@ -85,7 +85,7 @@ namespace Seating
             //Spawn Guest from ListItem to mousePosition
             dragGuest = Instantiate(guestPrefab, transform).GetComponent<Guest>();
             dragGuest.StartDrag();
-            dragGuest.Setup(FindObjectOfType<DinnerPartyGlobals>().Guests[item.relative].GetComponent<Guest>());
+            dragGuest.Setup(FindObjectOfType<DinnerPartyGlobals>().Guests[item.relative]);
             //dragGuest.SetPortrait(item.relative);
             dragGuest.transform.position = Input.mousePosition;
         }

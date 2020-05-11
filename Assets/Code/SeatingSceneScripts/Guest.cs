@@ -4,6 +4,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 
+[System.Serializable]
+public class GuestData
+{
+    public int relative = -1;
+    public Sprite  Head, Hair, Eyes, Mouth;
+    public string name = "Blank";
+}
+
 namespace Seating
 {
     public class Guest : MonoBehaviour
@@ -25,11 +33,11 @@ namespace Seating
             Hair = transform.GetChild(3).GetComponent<Image>();
         }
 
-        public void Setup(Guest guest)
+        public void Setup(GuestData guest)
         {
             relative = guest.relative;
-            GuestName = guest.GuestName;
-            Head.sprite = guest.Head.sprite;
+            GuestName = guest.name;
+            Head.sprite = guest.Head;
             if (relative == 0)
             {
                 Destroy(Eyes.gameObject);
@@ -37,9 +45,9 @@ namespace Seating
                 Destroy(Mouth.gameObject);
                 return;
             }
-            Hair.sprite = guest.Hair.sprite;
-            Eyes.sprite = guest.Eyes.sprite;
-            Mouth.sprite = guest.Mouth.sprite;
+            Hair.sprite = guest.Hair;
+            Eyes.sprite = guest.Eyes;
+            Mouth.sprite = guest.Mouth;
         }
 
         public void SetPortrait(int relativeIndex)

@@ -8,7 +8,7 @@ public class DinnerPartyGlobals : MonoBehaviour
     public PartyState currentPartyState;
 
     public List<Person> Persons = new List<Person>();
-    public List<GameObject> Guests = new List<GameObject>();
+    [SerializeField]public List<GuestData> Guests = new List<GuestData>();
     public Sprite GrannySprite;
 
     // Hard coded desired state for one scenario. This will need to be removed if we do multiple scenarios / generated scenarios
@@ -145,35 +145,25 @@ public class DinnerPartyGlobals : MonoBehaviour
 
     private void Start()
     {
-        GameObject guest0 = GuestGenerator.Singleton.CreateGuest();
-        Seating.Guest granny = guest0.GetComponent<Seating.Guest>();
-        granny.SetName("Granny");
-        granny.Head.sprite = GrannySprite;
-        Destroy(granny.Eyes.gameObject);
-        Destroy(granny.Hair.gameObject);
-        Destroy(granny.Mouth.gameObject);
-        //granny.Eyes.sprite = null;
-        //granny.Eyes.color = Color.clear;
-        //granny.Hair.sprite = null;
-        //granny.Hair.color = Color.clear;
-        //granny.Mouth.sprite = null;
-        //granny.Mouth.color = Color.clear;
-        granny.relative = 0;
+        GuestData guest0 = new GuestData();
+        guest0.name = "Granny";
+        guest0.Head = GrannySprite;
+        guest0.relative = 0;
         Person person0 = new Person(0)
         {
-            name = guest0.GetComponent<Seating.Guest>().GetName()
+            name = guest0.name
         };
         Guests.Add(guest0);
         Persons.Add(person0);
 
         for (int i = 1; i < 6; ++i)
         {
-            GameObject guest = GuestGenerator.Singleton.CreateGuest();
+            GuestData guest = GuestGenerator.Singleton.CreateGuestData();
             Person person = new Person(i)
             {
-                name = guest.GetComponent<Seating.Guest>().GetName()
+                name = guest.name
             };
-            guest.GetComponent<Seating.Guest>().relative = i;
+            guest.relative = i;
             Guests.Add(guest);
             Persons.Add(person);
         }

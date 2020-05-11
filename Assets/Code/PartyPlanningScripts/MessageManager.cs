@@ -25,7 +25,6 @@ public class MessageManager : MonoBehaviour
     public static MessageManager instance;
     public GameObject messageRightPrefab, messageLeftPrefab;
     public Transform left, right;
-    //private bool leftRight = true;
     private const string SetRegex = @"(?<Category>\w*):\r\n(?<Content>(\w*:.*\r\n)*)";
     private const string ConversationRegex = @"(?<Relative>\w*): (?<Text>.*)\r\n";
     [SerializeField] private TextAsset[] textAssets;
@@ -45,6 +44,13 @@ public class MessageManager : MonoBehaviour
 
     public void Start()
     {
+        DinnerPartyGlobals dinnerPartyGlobals = FindObjectOfType<DinnerPartyGlobals>();
+        string[] guestNames = new string[dinnerPartyGlobals.Guests.Count];
+        for (int i = 0; i < dinnerPartyGlobals.Guests.Count; i++)
+        {
+            guestNames[i] = dinnerPartyGlobals.Guests[i].name;
+        }
+
         Regex setRegex = new Regex(SetRegex);
         Regex convoRegex = new Regex(ConversationRegex);
 
@@ -62,9 +68,16 @@ public class MessageManager : MonoBehaviour
                 {
                     string relative = convoMatches[j].Groups["Relative"].Value;
                     string text = convoMatches[j].Groups["Text"].Value;
+                    text = ReplaceRelativeNames(text, guestNames);
+
+                    //if (relativeIndex == 5)
+                    //{
+                    //    text = text.Replace("[allergy]", );
+                    //}
+
                     conversation.Add(new string[] { relative, text });
                 }
-
+            
                 switch (setMatches[i].Groups["Category"].Value)
                 {
                     case "History":
@@ -157,5 +170,13 @@ public class MessageManager : MonoBehaviour
             Destroy(left.GetChild(i).gameObject);
             Destroy(right.GetChild(i).gameObject);
         }
+    }
+
+    public string ReplaceRelativeNames(string message, string[] guestNames)
+    {
+        for (int i = 0; i < guestNames.Length; i++)
+            message = message.Replace("[Relative " + i + "]", guestNames[i]);
+
+        return message;
     }
 }
