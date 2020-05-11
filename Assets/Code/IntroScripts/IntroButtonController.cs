@@ -6,7 +6,7 @@ public class IntroButtonController : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-    public Scene Scene;
+    public string sceneName;
 
     public void OnPlay()
     {
@@ -22,6 +22,6 @@ public class IntroButtonController : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         // Load scene
-        SceneManager.LoadScene("PartyPlanning");
+        SceneManager.LoadScene(sceneName);
     }
 }
