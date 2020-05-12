@@ -101,5 +101,10 @@ namespace Seating
 
             Destroy(guest.gameObject);
         }
+
+        public void RecordToGlobalState()
+        {
+            Debug.LogError("");
+        }
     }
 }
