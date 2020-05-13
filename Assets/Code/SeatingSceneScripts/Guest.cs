@@ -16,6 +16,7 @@ namespace Seating
 {
     public class Guest : MonoBehaviour
     {
+        public _2020Vision.Person person { get => new _2020Vision.Person(relative); }
         public bool inDrag = false, overSeat = false;
         public Image Head;
         public Image Hair;

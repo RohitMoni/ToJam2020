@@ -2,23 +2,23 @@ using System.Collections.Generic;
 
 namespace _2020Vision
 {
-    // All data relevant to a seat
-    public class Seat
-    {
-        public Person person; // Person this seat is assigned to
-    }
-
     // Seat data as a node, for use as a graph of seat nodes, representing a table and
     // connecting seats.
     // Need to use a graph vs a circular list because we have design requirements like having the seat 'across' the table be considered 'next to' the current seat.
     public class SeatNode
     {
-        public Seat seat;
+        public Seating.Seat seat;
         public List<SeatNode> connectedSeats;
 
         public bool IsSeated(Person person)
         {
-            return seat.person == person;
+            return seat.guest == person;
+        }
+
+        public SeatNode(Seating.Seat seat)
+        {
+            this.seat = seat;
+            connectedSeats = new List<SeatNode>();
         }
     }
 

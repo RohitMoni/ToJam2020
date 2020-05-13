@@ -15,7 +15,7 @@ Seating:
 You: Seating arrangements, you mentioned something?
 Relative: As I said: Can you make sure that I get to sit beside Granny? 
 
-Bringing: 
+Bringing:
 You: Hey, could you give me a bit more about your bean dip?
 Relative: It's a secret recipe handed down by generations by our great great grandmother! I won't just give it up that easily!
 You: I mean is that all your bringing? An appetizer?

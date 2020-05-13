@@ -167,5 +167,10 @@ public class DinnerPartyGlobals : MonoBehaviour
             Guests.Add(guest);
             Persons.Add(person);
         }
+
+        currentPartyState = new PartyState();
+        currentPartyState.contributionArrangement = new ContributionArrangement();
+        currentPartyState.foodArrangement = new FoodArrangement();
+        currentPartyState.seatingArrangement = new SeatingArrangement();
     }
 }

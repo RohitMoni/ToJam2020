@@ -314,6 +314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  connectedSeats:
+  - {fileID: 274092890}
+  - {fileID: 1532140443}
+  - {fileID: 632551026}
 --- !u!1 &159267953
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +604,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  connectedSeats:
+  - {fileID: 39720472}
+  - {fileID: 1532140443}
 --- !u!1 &283734089
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +695,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  connectedSeats:
+  - {fileID: 632551026}
+  - {fileID: 1639854492}
 --- !u!1 &297418211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,6 +1614,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  connectedSeats:
+  - {fileID: 39720472}
+  - {fileID: 1639854492}
+  - {fileID: 283734093}
 --- !u!1 &667942169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2292,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  connectedSeats:
+  - {fileID: 274092890}
+  - {fileID: 39720472}
+  - {fileID: 1639854492}
 --- !u!1 &1613207630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2473,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 297418215}
+        m_MethodName: RecordToGlobalState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1620222764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2580,6 +2609,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  connectedSeats:
+  - {fileID: 1532140443}
+  - {fileID: 632551026}
+  - {fileID: 283734093}
 --- !u!1 &1723071376
 GameObject:
   m_ObjectHideFlags: 0

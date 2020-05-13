@@ -30,6 +30,7 @@ namespace Seating
         public void PlaceGuest(Seat seat)
         {
             dragGuest.SeatGuest(seat.transform);
+            seat.guest = dragGuest.person;
 
             if (seat.transform.childCount == 1)
             {
@@ -104,7 +105,39 @@ namespace Seating
 
         public void RecordToGlobalState()
         {
-            Debug.LogError("");
+            DinnerPartyGlobals partyGlobals = FindObjectOfType<DinnerPartyGlobals>();
+
+            var seatingArrangement = new _2020Vision.SeatingArrangement();
+            seatingArrangement.tables = new List<_2020Vision.DinnerTable>();
+
+            List<_2020Vision.SeatNode> seatNodes = new List<_2020Vision.SeatNode>();
+            Seat[] seats = GetComponentsInChildren<Seat>();
+            foreach (Seat seat in seats)
+            {
+                seatNodes.Add(seat.seatNode);
+            }
+            foreach(var seatNode in seatNodes)
+            {
+                foreach(var seat in seatNode.seat.connectedSeats)
+                {
+                    seatNode.connectedSeats.Add(seat.seatNode);
+                }
+            }
+
+            seatingArrangement.tables.Add(new _2020Vision.DinnerTable());
+
+            seatingArrangement.tables[0].head = seatNodes[0];
+
+            partyGlobals.currentPartyState.seatingArrangement = seatingArrangement;
+
+            //foreach(var seat in partyGlobals.currentPartyState.seatingArrangement.tables[0].head.connectedSeats)
+            //{
+            //    Debug.Log(seat.seat.name);
+            //}
+
+            Debug.Log("Recorded State " + partyGlobals.requirements[0].IsMet(new _2020Vision.RequirementContext() { partyState = partyGlobals.currentPartyState }));
+
+            
         }
     }
 }

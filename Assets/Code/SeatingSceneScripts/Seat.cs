@@ -9,10 +9,14 @@ namespace Seating
     public class Seat : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         public SeatingManager manager;
+        public _2020Vision.SeatNode seatNode;
+        public _2020Vision.Person guest;
+        [SerializeField]public Seat[] connectedSeats;
 
         private void Start()
         {
             manager = SeatingManager.instance;
+            seatNode = new _2020Vision.SeatNode(this);
         }
 
         public void OnPointerEnter(PointerEventData e)
