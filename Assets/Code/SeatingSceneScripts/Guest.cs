@@ -14,15 +14,14 @@ public class GuestData
 
 namespace Seating
 {
-    public class Guest : MonoBehaviour
+    public class Guest : Item
     {
         public _2020Vision.Person person { get => new _2020Vision.Person(relative); }
-        public bool inDrag = false, overSeat = false;
         public Image Head;
         public Image Hair;
         public Image Eyes;
         public Image Mouth;
-        public int relative, seatIndex = -1;
+        public int relative;
 
         private string GuestName = "Unnamed";
 
@@ -49,12 +48,6 @@ namespace Seating
             Hair.sprite = guest.Hair;
             Eyes.sprite = guest.Eyes;
             Mouth.sprite = guest.Mouth;
-        }
-
-        public void SetPortrait(int relativeIndex)
-        {
-            relative = relativeIndex;
-            Head.sprite = FindObjectOfType<SeatingManager>().guestHeads[relative];
         }
 
         public void SetPortrait(Sprite head, int relativeIndex)
@@ -88,27 +81,10 @@ namespace Seating
             return GuestName;
         }
 
-        public void StartDrag()
+        public override void SeatGuest(Transform seatTransform)
         {
-            inDrag = true;
-        }
-
-        public void SeatGuest(Transform seatTransform)
-        {
-            inDrag = false;
-            overSeat = false;
-
-            transform.position = seatTransform.position;
-            transform.SetParent(seatTransform);
+            base.SeatGuest(seatTransform);
             seatIndex = seatTransform.GetSiblingIndex();
-        }
-
-        public void Update()
-        {
-            if (inDrag && !overSeat)
-            {
-                transform.position = Input.mousePosition;
-            }
         }
     }
 }

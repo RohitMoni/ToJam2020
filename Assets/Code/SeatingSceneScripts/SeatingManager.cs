@@ -5,105 +5,27 @@ using UnityEngine;
 
 namespace Seating
 {
-    public class SeatingManager : MonoBehaviour
+    public class SeatingManager : ItemManager
     {
-        public static SeatingManager instance;
-        public Guest dragGuest;
-        public GameObject inventory;
-        public GameObject guestPrefab;
+        public new Guest dragGuest;
 
-        public Sprite[] guestHeads;
-
-        public bool IsDragging { get => dragGuest; }
-
-        private void Awake()
+        public override void PlaceGuest(ItemSpot spot)
         {
-            if (instance == null)
-            {
-                instance = this;
+            Seat seat = spot as Seat;
+            if (seat == null)
                 return;
-            }
 
-            Destroy(gameObject);
-        }
-
-        public void PlaceGuest(Seat seat)
-        {
-            dragGuest.SeatGuest(seat.transform);
             seat.guest = dragGuest.person;
-
-            if (seat.transform.childCount == 1)
-            {
-                dragGuest = null;
-            }
-            else
-            {
-                Guest oldGuest = seat.transform.GetChild(0).GetComponent<Guest>();
-                PickUpGuest(oldGuest);
-            }
         }
 
-        public void PickUpGuest(Guest item)
+
+        public override void PickUpGuest(ListItem item)
         {
-            dragGuest = item;
-            dragGuest.transform.SetParent(transform);
-            dragGuest.StartDrag();
-        }
-
-        public void Update()
-        {
-            if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) && IsDragging && !dragGuest.overSeat)
-            {
-                ReleaseGuest();
-            }
-        }
-
-        public void ReleaseGuest()
-        {
-            //If the Guest was in a seat return them
-            if (dragGuest.seatIndex > -1)
-            {
-                Seat seat = transform.GetChild(dragGuest.seatIndex).GetComponent<Seat>();
-
-                if (seat.transform.childCount == 0)
-                {
-                    PlaceGuest(seat);
-                    return;
-                }
-            }
-            //Else the Guest came from the GuestList
-            ReturnGuestToList(dragGuest);
-        }
-
-        public void PickUpGuest(GuestListItem item)
-        {
-            //Release the held Guest
-            if (IsDragging)
-            {
-                ReleaseGuest();
-            }
-
-            //Spawn Guest from ListItem to mousePosition
-            dragGuest = Instantiate(guestPrefab, transform).GetComponent<Guest>();
-            dragGuest.StartDrag();
+            base.PickUpGuest(item);
             dragGuest.Setup(FindObjectOfType<DinnerPartyGlobals>().Guests[item.relative]);
-            //dragGuest.SetPortrait(item.relative);
-            dragGuest.transform.position = Input.mousePosition;
         }
 
-        public void ReturnGuestToList(Guest guest)
-        {
-            //Get the ListItems into a list and find uncollapse the item
-            List<GuestListItem> guestList = new List<GuestListItem>();
-            guestList.AddRange(inventory.GetComponentsInChildren<GuestListItem>());
-
-
-            guestList.Find(g => g.relative == guest.relative).Show();
-
-            Destroy(guest.gameObject);
-        }
-
-        public void RecordToGlobalState()
+        public void RecordSeatingToGlobalState()
         {
             DinnerPartyGlobals partyGlobals = FindObjectOfType<DinnerPartyGlobals>();
 
@@ -116,9 +38,9 @@ namespace Seating
             {
                 seatNodes.Add(seat.seatNode);
             }
-            foreach(var seatNode in seatNodes)
+            foreach (var seatNode in seatNodes)
             {
-                foreach(var seat in seatNode.seat.connectedSeats)
+                foreach (var seat in seatNode.seat.connectedSeats)
                 {
                     seatNode.connectedSeats.Add(seat.seatNode);
                 }
@@ -129,15 +51,6 @@ namespace Seating
             seatingArrangement.tables[0].head = seatNodes[0];
 
             partyGlobals.currentPartyState.seatingArrangement = seatingArrangement;
-
-            //foreach(var seat in partyGlobals.currentPartyState.seatingArrangement.tables[0].head.connectedSeats)
-            //{
-            //    Debug.Log(seat.seat.name);
-            //}
-
-            Debug.Log("Recorded State " + partyGlobals.requirements[0].IsMet(new _2020Vision.RequirementContext() { partyState = partyGlobals.currentPartyState }));
-
-            
         }
     }
 }

@@ -2474,7 +2474,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 297418215}
-        m_MethodName: RecordToGlobalState
+        m_MethodName: RecordSeatingToGlobalState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
