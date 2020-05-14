@@ -67,6 +67,7 @@ namespace _2020Vision
                             nodesToVisit.Add(connectedNode);
                         }
                     }
+                    nodesToVisit.RemoveAt(0);
                 }
             }
 
