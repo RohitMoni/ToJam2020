@@ -309,10 +309,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 39720468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77df448b153f6fb419b0b2106b085f8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ecce7697931894b9b21a97a70da60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
+  food:
+    course: 0
 --- !u!1 &80899089
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,10 +755,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 274092886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77df448b153f6fb419b0b2106b085f8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ecce7697931894b9b21a97a70da60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
+  food:
+    course: 5
 --- !u!1 &283734089
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,10 +846,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 283734089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77df448b153f6fb419b0b2106b085f8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ecce7697931894b9b21a97a70da60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
+  food:
+    course: 3
 --- !u!1 &297418211
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,14 +943,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 297418211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1be785aa2394e448bc69e58360a0e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f45e61b49eac8d47aabf96c4f7841eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dragGuest: {fileID: 0}
   inventory: {fileID: 159267953}
   guestPrefab: {fileID: 6644111706264189022, guid: 15badb56db227ac44aa70c88b26f7ae9,
     type: 3}
-  dragGuest: {fileID: 0}
 --- !u!1 &322130313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1035,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1442154960}
         m_MethodName: OnPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 297418215}
+        m_MethodName: RecordFoodToGlobalState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1350,42 +1369,42 @@ PrefabInstance:
     - target: {fileID: 4604141711344488019, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4604141711344488019, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604141711344488019, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4604141711344488019, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604141711344488019, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5344569655050794244, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: relative
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5344569655050794244, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 297418215}
     - target: {fileID: 6644111706264189022, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_Name
       value: Ralative 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9136518839578477497, guid: 8c2db58c39a00064d880046b6467a6d8,
-        type: 3}
-      propertyPath: m_PreferredWidth
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c2db58c39a00064d880046b6467a6d8, type: 3}
@@ -1634,6 +1653,11 @@ PrefabInstance:
       propertyPath: relative
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5344569655050794244, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 297418215}
     - target: {fileID: 6644111706264189022, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_Name
@@ -1800,6 +1824,11 @@ PrefabInstance:
       propertyPath: relative
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5344569655050794244, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 297418215}
     - target: {fileID: 6644111706264189022, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_Name
@@ -1903,10 +1932,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 632551022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77df448b153f6fb419b0b2106b085f8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ecce7697931894b9b21a97a70da60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
+  food:
+    course: 2
 --- !u!224 &668749167 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2093186838047848212, guid: 8c2db58c39a00064d880046b6467a6d8,
@@ -2161,6 +2193,11 @@ PrefabInstance:
       propertyPath: relative
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5344569655050794244, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 297418215}
     - target: {fileID: 6644111706264189022, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_Name
@@ -2355,6 +2392,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 021ad1ff65b1b364bb179a01eea066eb,
         type: 3}
+    - target: {fileID: 5344569655050794244, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 297418215}
     - target: {fileID: 6332195999530436705, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_Color.a
@@ -2739,10 +2781,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1532140439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77df448b153f6fb419b0b2106b085f8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ecce7697931894b9b21a97a70da60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
+  food:
+    course: 1
 --- !u!1 &1596166549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3223,10 +3268,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639854488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77df448b153f6fb419b0b2106b085f8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ecce7697931894b9b21a97a70da60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
+  food:
+    course: 4
 --- !u!1 &1655719544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,6 +4055,11 @@ PrefabInstance:
       propertyPath: relative
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5344569655050794244, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 297418215}
     - target: {fileID: 6644111706264189022, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_Name

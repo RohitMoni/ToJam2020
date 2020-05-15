@@ -23,6 +23,7 @@ namespace _2020Vision
         GlutenFree,
     }
     
+    [System.Serializable]
     public class Food
     {
         public FoodCourse course = FoodCourse.None;

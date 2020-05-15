@@ -9,13 +9,13 @@ public class ListItem : MonoBehaviour, IPointerClickHandler
 {
     public int relative;
     private CanvasGroup canvasGroup;
-    private ItemManager manager;
+    [SerializeField]private ItemManager manager;
 
-    //Temp
     private void Start()
     {
         relative = transform.GetSiblingIndex();
         canvasGroup = GetComponent<CanvasGroup>();
+        manager = ItemManager.instance;
     }
 
     //The ListItem is hidden and shown based on changes to preferred height so that it is still in the same position in the list
@@ -23,7 +23,7 @@ public class ListItem : MonoBehaviour, IPointerClickHandler
     {
         if (e.button == PointerEventData.InputButton.Left)
         {
-            manager.PickUpGuest(this);
+            manager.PickUpItem(this);
             Hide();
         }
     }
@@ -32,11 +32,13 @@ public class ListItem : MonoBehaviour, IPointerClickHandler
     {
         GetComponent<LayoutElement>().preferredHeight = 100;
         canvasGroup.alpha = 1;
+        canvasGroup.blocksRaycasts = true;
     }
 
     public void Hide()
     {
         GetComponent<LayoutElement>().preferredHeight = 0;
         canvasGroup.alpha = 0;
+        canvasGroup.blocksRaycasts = false;
     }
 }

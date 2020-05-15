@@ -13,8 +13,7 @@ public class ContactListManager : MonoBehaviour
         {
             GameObject guestGameObject = transform.GetChild(i).gameObject;
 
-            guestGameObject.GetComponentInChildren<Seating.Guest>().Setup(
-                             globals.Guests[i]);
+            guestGameObject.GetComponentInChildren<Guest>().Setup(globals.Guests[i]);
 
             guestGameObject.GetComponentInChildren<TextMeshProUGUI>().SetText(globals.Guests[i].name);
         }

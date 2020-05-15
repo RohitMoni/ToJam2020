@@ -7,21 +7,28 @@ namespace Seating
 {
     public class SeatingManager : ItemManager
     {
-        public new Guest dragGuest;
+        public Guest dragGuest { get => dragItem as Guest; }
 
-        public override void PlaceGuest(ItemSpot spot)
+        private void Start()
         {
-            Seat seat = spot as Seat;
-            if (seat == null)
-                return;
+            foreach(Seat seat in GetComponentsInChildren<Seat>())
+            {
+                seat.manager = this;
+            }
+        }
 
-            seat.guest = dragGuest.person;
+        public override void PlaceItem(ItemSpot spot)
+        {
+            if (spot is Seat seat)
+                seat.person = dragGuest.person;
+
+            base.PlaceItem(spot);
         }
 
 
-        public override void PickUpGuest(ListItem item)
+        public override void PickUpItem(ListItem item)
         {
-            base.PickUpGuest(item);
+            base.PickUpItem(item);
             dragGuest.Setup(FindObjectOfType<DinnerPartyGlobals>().Guests[item.relative]);
         }
 
@@ -29,8 +36,10 @@ namespace Seating
         {
             DinnerPartyGlobals partyGlobals = FindObjectOfType<DinnerPartyGlobals>();
 
-            var seatingArrangement = new _2020Vision.SeatingArrangement();
-            seatingArrangement.tables = new List<_2020Vision.DinnerTable>();
+            var seatingArrangement = new _2020Vision.SeatingArrangement
+            {
+                tables = new List<_2020Vision.DinnerTable>()
+            };
 
             List<_2020Vision.SeatNode> seatNodes = new List<_2020Vision.SeatNode>();
             Seat[] seats = GetComponentsInChildren<Seat>();

@@ -8,10 +8,16 @@ using Seating;
 public class ItemSpot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public ItemManager manager;
+    public Item heldItem;
 
-    private void Start()
+    public void AddItem(Item item)
     {
-        manager = ItemManager.instance;
+        heldItem = item;
+    }
+
+    public void RemoveItem()
+    {
+        heldItem = null;
     }
 
     public void OnPointerEnter(PointerEventData e)
@@ -19,8 +25,8 @@ public class ItemSpot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         //Fixes the Guest into this Seat and tells it to stop updating mousePosition
         if (manager.IsDragging)
         {
-            manager.dragGuest.overSpot = true;
-            manager.dragGuest.transform.position = transform.position;
+            manager.dragItem.overSpot = true;
+            manager.dragItem.transform.position = transform.position;
         }
     }
 
@@ -29,7 +35,7 @@ public class ItemSpot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         //Removes Guest in Seat preview
         if (manager.IsDragging)
         {
-            manager.dragGuest.overSpot = false;
+            manager.dragItem.overSpot = false;
         }
     }
 
@@ -39,18 +45,18 @@ public class ItemSpot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             if (manager.IsDragging)
             {
-                manager.PlaceGuest(this);
+                manager.PlaceItem(this);
             }
             else if (transform.childCount > 0)
             {
-                manager.PickUpGuest(GetComponentInChildren<Guest>());
+                manager.PickUpItem(GetComponentInChildren<Guest>());
             }
         }
         else if (e.button == PointerEventData.InputButton.Right)
         {
             if (transform.childCount > 0)
             {
-                manager.ReturnGuestToList(GetComponentInChildren<Guest>());
+                manager.ReturnItemToList(GetComponentInChildren<Guest>());
             }
         }
     }

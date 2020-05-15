@@ -18,7 +18,8 @@ namespace _2020Vision
             // Add epsilon to account for floating point error (Ex: 0.999 should be 1.x). Important because we floor the value later
             // Multiply by the max score (0.8 * 3 = 2.4)
             // Floor it to get the number of stars (2.4 => 2)
-            return (int) Math.Floor((scorePercentage + float.Epsilon) * MaxScoreStars);
+            int total = (int)Math.Floor((scorePercentage + float.Epsilon) * MaxScoreStars);
+            return total;
         }
 
         // Returns a number between 0 and 1, representing the percentage score accomplished by the state passed in
@@ -41,8 +42,7 @@ namespace _2020Vision
                     evalScore += req.Value;
                 }
             }
-
-            return evalScore / maxScore;
+            return (float)evalScore / maxScore;
         }
 
         // Returns a list of feedback strings

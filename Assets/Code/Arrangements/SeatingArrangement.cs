@@ -7,15 +7,15 @@ namespace _2020Vision
     // Need to use a graph vs a circular list because we have design requirements like having the seat 'across' the table be considered 'next to' the current seat.
     public class SeatNode
     {
-        public Seating.Seat seat;
+        public Seat seat;
         public List<SeatNode> connectedSeats;
 
         public bool IsSeated(Person person)
         {
-            return seat.guest == person;
+            return seat.person == person;
         }
 
-        public SeatNode(Seating.Seat seat)
+        public SeatNode(Seat seat)
         {
             this.seat = seat;
             connectedSeats = new List<SeatNode>();
@@ -31,8 +31,10 @@ namespace _2020Vision
         {
             SeatNode rv = null;
 
-            var nodesToVisit = new List<SeatNode>();
-            nodesToVisit.Add(head);
+            List<SeatNode> nodesToVisit = new List<SeatNode>
+            {
+                head
+            };
 
             var visitedNodes = new List<SeatNode>();
 

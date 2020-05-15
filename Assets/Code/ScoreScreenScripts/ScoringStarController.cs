@@ -4,10 +4,9 @@ using _2020Vision;
 
 public class ScoringStarController : MonoBehaviour
 {
-    public float starScoreDelay = 2f;
+    public float starScoreDelay;
     public GameObject[] Stars;
 
-    // Start is called before the first frame update
     void Start()
     {
         var dinnerPartyGlobals = GameObject.Find("Globals").GetComponent<DinnerPartyGlobals>();

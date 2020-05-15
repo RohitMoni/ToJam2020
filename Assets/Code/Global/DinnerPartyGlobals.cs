@@ -145,10 +145,12 @@ public class DinnerPartyGlobals : MonoBehaviour
 
     private void Start()
     {
-        GuestData guest0 = new GuestData();
-        guest0.name = "Granny";
-        guest0.Head = GrannySprite;
-        guest0.relative = 0;
+        GuestData guest0 = new GuestData()
+        {
+            name = "Granny",
+            Head = GrannySprite,
+            relative = 0
+        };
         Person person0 = new Person(0)
         {
             name = guest0.name
@@ -168,9 +170,11 @@ public class DinnerPartyGlobals : MonoBehaviour
             Persons.Add(person);
         }
 
-        currentPartyState = new PartyState();
-        currentPartyState.contributionArrangement = new ContributionArrangement();
-        currentPartyState.foodArrangement = new FoodArrangement();
-        currentPartyState.seatingArrangement = new SeatingArrangement();
+        currentPartyState = new PartyState()
+        {
+            contributionArrangement = new ContributionArrangement(),
+            foodArrangement = new FoodArrangement(),
+            seatingArrangement = new SeatingArrangement()
+        };
     }
 }
