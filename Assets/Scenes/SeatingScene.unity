@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
   connectedSeats:
   - {fileID: 274092890}
   - {fileID: 1532140443}
@@ -604,6 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
   connectedSeats:
   - {fileID: 39720472}
   - {fileID: 1532140443}
@@ -695,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
   connectedSeats:
   - {fileID: 632551026}
   - {fileID: 1639854492}
@@ -791,16 +794,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1be785aa2394e448bc69e58360a0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragGuest: {fileID: 0}
+  dragItem: {fileID: 0}
   inventory: {fileID: 159267953}
   guestPrefab: {fileID: 6644111706264189022, guid: 15badb56db227ac44aa70c88b26f7ae9,
     type: 3}
-  guestHeads:
-  - {fileID: 21300000, guid: 47e7103f896b05846b23c2d2716d2b30, type: 3}
-  - {fileID: 21300000, guid: 5751a9a9386c5674c9c97cd14a15d5ce, type: 3}
-  - {fileID: 21300000, guid: 858e2721f2d98524a9d0d3f913a8f00a, type: 3}
-  - {fileID: 21300000, guid: 62f239ca1c6bcad4b92e4e72a7013479, type: 3}
-  - {fileID: 21300000, guid: d494306d87989d14c9b32fdd5c7c7992, type: 3}
 --- !u!1001 &353924910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1614,6 +1611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
   connectedSeats:
   - {fileID: 39720472}
   - {fileID: 1639854492}
@@ -1975,12 +1973,17 @@ PrefabInstance:
     - target: {fileID: 1672620605273275853, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -148.2
+      value: -163.92
       objectReference: {fileID: 0}
     - target: {fileID: 1672620605273275853, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 81.63692
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672620605273275853, guid: 8c2db58c39a00064d880046b6467a6d8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.1735
       objectReference: {fileID: 0}
     - target: {fileID: 2093186838047848212, guid: 8c2db58c39a00064d880046b6467a6d8,
         type: 3}
@@ -2292,6 +2295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
   connectedSeats:
   - {fileID: 274092890}
   - {fileID: 39720472}
@@ -2609,6 +2613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  heldItem: {fileID: 0}
   connectedSeats:
   - {fileID: 1532140443}
   - {fileID: 632551026}
